@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Material_models extends CI_Model{
+class Member_shipping_model extends CI_Model{
 
 
 	public function add_regis_shipping(){
@@ -11,10 +11,9 @@ class Material_models extends CI_Model{
         	'mem_shipper_username' 				=> $this->input->post('mem_shipper_username'),
      		'mem_shipper_password' 				=> $this->input->post('mem_shipper_password'),
             'created'       					=> $timestam,
-            'lastupdate'    					=> $timestam,
-            'mem_shipping_pic'      			=> $mem_shipping_pic
-
+            'last_update'    					=> $timestam
             );
+      
 		$this->db->insert('member_shipper',$input);
 	}
 	
