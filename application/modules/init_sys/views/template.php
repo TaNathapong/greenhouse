@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="<?php echo base_url('dist/css/responsive.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('dist/css/flipclock.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('dist/css/flipclock.scss');?>">
+    
 
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 </head>
