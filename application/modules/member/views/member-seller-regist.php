@@ -1,6 +1,6 @@
 <?php
 $attr = array('class' => 'form-horizontal');
-echo form_open('member/add_seller_data',$attr);
+echo form_open('member/add_regis_seller',$attr);
 ?>
 <div class="container">
     <form class="form-horizontal" role="form"><br/>
@@ -15,25 +15,25 @@ echo form_open('member/add_seller_data',$attr);
         <div class="form-group">
             <label for="idNum" class="col-sm-3 control-label">ชื่อ-นามสกุล</label>
             <div class="col-sm-9">
-                <input type="namelastname" id="namelastname" placeholder="" class="form-control" name="member_seller_name">
+                <input type="namelastname" id="namelastname" placeholder="" class="form-control" name="mem_seller_name">
             </div>
         </div>
         <div class="form-group">
             <label for="idNum" class="col-sm-3 control-label">เลขทีบัตรประชาชน</label>
             <div class="col-sm-9">
-                <input type="idcard" id="idcard" placeholder="" class="form-control" name="member_seller_idcard">
+                <input type="idcard" id="idcard" placeholder="" class="form-control" name="mem_seller_idcard">
             </div>
         </div>
         <div class="form-group">
             <label for="birthDate" class="col-sm-3 control-label">วันเกิด</label>
             <div class="col-sm-9">
-                <input type="date" id="" class="form-control" name="member_seller_birth">
+                <input type="date" id="" class="form-control" name="mem_seller_birth">
             </div>
         </div>
         <div class="form-group">
             <label for="email" class="col-sm-3 control-label">Email</label>
             <div class="col-sm-9">
-                <input type="email" id="email" placeholder="" class="form-control" name="member_seller_email">
+                <input type="email" id="email" placeholder="" class="form-control" name="mem_seller_email">
             </div>
         </div>
         <div class="form-group">
@@ -152,31 +152,7 @@ echo form_open('member/add_seller_data',$attr);
         <div class="form-group">
             <div class="col-sm-9"></div>
             <div class="col-sm-3">
-                <a class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myAddRawModal">สมัครสมาชิก</a>
-            </div>
-        </div>
-        <div id="myAddRawModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-
-        <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">ยืนยันข้อมูล?</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        <div class="col-sm-4 col-xs-4"></div>
-                        <div class="col-sm-4 col-xs-4">
-                            <button type="submit" class="btn btn-success btn-lg btn-block">ยืนยัน</button>
-                        </div>
-                        <div class="col-sm-4 col-xs-4">
-                        <a type="button" data-dismiss="modal" class="btn btn-danger btn-lg btn-block">ยกเลิก</a>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer"></div>
-                </div>
+                <button type="submit" class="btn btn-info btn-block" href="">สมัครสมาชิก</button>
             </div>
         </div>
     </form> <!-- /form -->
