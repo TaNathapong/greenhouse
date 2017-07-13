@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Manage_product extends CI_Model {
+class Edit_models extends CI_Model {
 
     public function get_product_list($qstr)
     {
@@ -32,3 +32,4 @@ class Manage_product extends CI_Model {
                       ->result_array();
       return $results;
     }
+}
