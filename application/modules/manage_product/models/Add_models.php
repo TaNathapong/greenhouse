@@ -11,7 +11,7 @@ class Add_models extends CI_Model {
                       ->result_array();
       return $results;
     }
-    public function get_auc_product_detail($auc_id)
+    public function get_auc_detail($auc_id)
     {
       $items='*';
       $results = $this->db->select($items)
@@ -104,5 +104,5 @@ class Add_models extends CI_Model {
 
         $this->db->insert('product',$input);
     }
-    
+
 }

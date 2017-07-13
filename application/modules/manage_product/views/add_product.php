@@ -202,7 +202,7 @@ echo form_open_multipart('Manage_product/set_product_profile_page', $attr);?>
                                 <label class="checkbox-inline"><input type="checkbox" value="1">อื่นๆ</label>
                             </div>
                         </div><br>
-                        <div class="text-center"><buttom href="" class="btn btn-success btn-lg" type="submit">บันทึก</buttom></div>
+                        <div class="text-center"><button  class="btn btn-success btn-lg" type="submit">บันทึก</button></div>
                     </div>
 
                 </div><br><br>
