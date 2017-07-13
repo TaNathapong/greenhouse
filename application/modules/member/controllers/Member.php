@@ -11,21 +11,20 @@ class Member extends MX_Controller {
         $data['content']='member/regis-shipping-member';
         $this->init_sys->content($data);
     }
-      public function conferm_page(){
-        $data['content']='member/conferm-page';
+      public function confirm_page(){
+        $data['content']='member/confirm-page';
         $this->init_sys->content($data);
     }
 
     public function add_regis_shipping(){
 		$this->load->models('Member_shipping_model');
         $this->Member_Shipping_model->add_regis_shipping();
-		$this->session->set_flashdata('alert', 1);
-		redirect('member/comferm_page');
+		//redirect('member/comfirm_page');
 	}
 	public function get_regis_shipping (){
 		$this->load->models('Member_shipping_model');
 		$result = $this->Member_shipping_model->get_regis_shipping();
-		//echo '<pre>', print_r($result);
+		echo '<pre>', print_r($result);
 		return $result;
 
 	}

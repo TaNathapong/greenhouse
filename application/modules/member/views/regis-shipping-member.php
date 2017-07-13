@@ -3,6 +3,7 @@
 $attr = array('class'=> 'form-horizontal');
 echo form_open_multipart('member/add_regis_shipping',$attr);
 ?>
+
 <div class="container">
     <br/>
         <h2 style="color: Green">ข้อมูลของผู้ขนส่ง</h2>
