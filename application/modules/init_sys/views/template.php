@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="<?php echo base_url('dist/css/responsive.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('dist/css/flipclock.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('dist/css/flipclock.scss');?>">
+    
 
     <!-- timer -->
     <link href="<?php echo base_url('../compiled/flipclock.css');?>" rel="stylesheet" >
