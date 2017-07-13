@@ -16,24 +16,17 @@ class manage_product extends MX_Controller {
     }
     public function set_product_profile_page(){
         echo '<pre>', print_r($this->input->post());
-    }
-    public function get_product_profile_page(){
-        $data['food_details'] = $this->Add_models->get_product_detail();
-        $data['content']='Manage_product/add_product';
-        $this->init_sys->content($data);
+        $this->Add_models->add_product_detail();
     }
 
     public function add_auc_page(){
         $data['content']='Manage_product/add_auc_product';
         $this->init_sys->content($data);
     }
-    public function get_auc_profile_page(){
-        $data['food_details'] = $this->Add_models->get_auc_detailt();
-        $data['content']='Manage_product/add_product';
-        $this->init_sys->content($data);
-    }
     public function set_auc_profile_page(){
         echo '<pre>', print_r($this->input->post());
+        $this->Add_models->add_auc_detail();
+
     }
 
     public function add_travel_page(){
@@ -41,10 +34,12 @@ class manage_product extends MX_Controller {
 		$this->init_sys->content($data);
     }
     public function edit_prouduct_page(){
-        $food_id = $this->uri->segment(3);
-        $data['product_details'] = $this->Edit_models->get_product_detail();
+
         $data['content']='Manage_product/edit_product';
-		$this->init_sys->content($data);
+        $product_id = $this->uri->segment(3);
+        $timestam = date('Y-m-d H:i:s');
+        $data['product_details'] = $this->product_model->get_product_detail($product_id);
+        $this->init_sys->content($data);
     }
     public function edit_auc_prouduct_page(){
 

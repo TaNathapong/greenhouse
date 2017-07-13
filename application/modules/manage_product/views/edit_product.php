@@ -227,7 +227,7 @@ echo form_open_multipart('Manage_product/edit_product_page', $attr);?>
                                 <label class="checkbox-inline"><input type="checkbox" value="1">อื่นๆ</label>
                             </div>
                         </div><br>
-                        <div class="text-center"><a href="show-products-seller.html" class="btn btn-success btn-lg">SAVE</a></div>
+                        <div class="text-center"><button  class="btn btn-success btn-lg" type="submit">บันทึก</button></div>
                     </div>
 
                 </div><br><br>
@@ -235,3 +235,4 @@ echo form_open_multipart('Manage_product/edit_product_page', $attr);?>
         </div>
     </div>
 </div>
+<?php echo form_close();?>
