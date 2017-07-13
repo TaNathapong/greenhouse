@@ -37,15 +37,15 @@ echo form_open('member/add_regis_seller',$attr);
             </div>
         </div>
         <div class="form-group">
-            <label for="username" class="col-sm-3 control-label">ชื่อผู้ใช้</label>
+            <label for="userName" class="col-sm-3 control-label">ชื่อผู้ใช้</label>
             <div class="col-sm-9">
-                <input type="password" id="password" placeholder="" class="form-control" name="member_seller_username">
+                <input type="password" id="password" placeholder="" class="form-control" name="mem_seller_username">
             </div>
         </div>
         <div class="form-group">
             <label for="password" class="col-sm-3 control-label">รหัสผ่าน</label>
             <div class="col-sm-9">
-                <input type="password" id="password" placeholder="" class="form-control" name="member_seller_password">
+                <input type="password" id="password" placeholder="" class="form-control" name="mem_seller_password">
             </div>
         </div>
         <div class="form-group">
@@ -60,25 +60,25 @@ echo form_open('member/add_regis_seller',$attr);
         <div class="form-group">
             <label for="country" class="col-sm-3 control-label">ธนาคาร</label>
             <div class="col-sm-9">
-                <input type="payment" id="paymentpayment" placeholder="" class="form-control" name="member_seller_payment">
+                <input type="payment" id="paymentpayment" placeholder="" class="form-control" name="mem_seller_payment">
             </div>
         </div>
         <div class="form-group">
             <label for="name-booking" class="col-sm-3 control-label">ชื่อบัญชีธนาคาร</label>
             <div class="col-sm-9">
-                <input type="payment" id="paymentName" placeholder="" class="form-control" name="member_seller_payment_name">
+                <input type="payment" id="paymentName" placeholder="" class="form-control" name="mem_seller_payment_name">
             </div>
         </div>
         <div class="form-group">
             <label for="num-booking" class="col-sm-3 control-label">เลขบัญชีธนาคาร</label>
             <div class="col-sm-9">
-                <input type="payment" id="paymentid" placeholder="" class="form-control" name="member_seller_payment_id">
+                <input type="payment" id="paymentid" placeholder="" class="form-control" name="mem_seller_payment_id">
             </div>
         </div>
         <div class="form-group">
             <label for="nameComp" class="col-sm-3 control-label">ชื่อกิจการ</label>
             <div class="col-sm-9">
-                <input type="bussiness_name" id="bussiness_name" placeholder="" class="form-control" name="mem_seller_bussibussiness_nameness_name">
+                <input type="bussiness_name" id="bussiness_name" placeholder="" class="form-control" name="mem_seller_bussiness_name">
             </div>
         </div>
         <div class="form-group">
@@ -102,7 +102,7 @@ echo form_open('member/add_regis_seller',$attr);
         <div class="form-group">
             <label for="country" class="col-sm-3 control-label">จังหวัด</label>
             <div class="col-sm-9">
-                <input type="bussiness_province" id="bussiness_provincebussiness_province" placeholder="" class="form-control" name="mem_seller_bussiness_provincebussiness_province">
+                <input type="bussiness_province" id="bussiness_province" placeholder="" class="form-control" name="mem_seller_bussiness_province">
             </div>
         </div>
         <div class="form-group">
@@ -120,7 +120,7 @@ echo form_open('member/add_regis_seller',$attr);
         <div class="form-group">
             <label for="phoneNumber" class="col-sm-3 control-label">โทรศัพธ์</label>
             <div class="col-sm-9">
-                <input type="tel" id="tel" placeholder="" class="form-control" name="member_seller_tel">
+                <input type="tel" id="tel" placeholder="" class="form-control" name="mem_seller_tel">
             </div>
         </div>
 
@@ -128,25 +128,25 @@ echo form_open('member/add_regis_seller',$attr);
         <div class="form-group">
             <label for="address" class="col-sm-3 control-label">ที่อยู่</label>
             <div class="col-sm-9">
-                <input type="address_bill" id="address_bill" placeholder="" class="form-control" name="member_seller_address_bill">
+                <input type="address_bill" id="address_bill" placeholder="" class="form-control" name="mem_seller_address_bill">
             </div>
         </div>
         <div class="form-group">
             <label for="subdistric" class="col-sm-3 control-label">ตำบล</label>
             <div class="col-sm-9">
-                <input type="subdistric_bill" id="subdistric_bill" placeholder="" class="form-control" name="member_seller_subdistric_bill">
+                <input type="subdistric_bill" id="subdistric_bill" placeholder="" class="form-control" name="mem_seller_subdistrict_bill">
             </div>
         </div>
         <div class="form-group">
             <label for="distric" class="col-sm-3 control-label">อำเภอ</label>
             <div class="col-sm-9">
-                <input type="distric_bill" id="distric_bill" placeholder="" class="form-control" name="member_seller_distric_bill">
+                <input type="distric_bill" id="distric_bill" placeholder="" class="form-control" name="mem_seller_district_bill">
             </div>
         </div>
         <div class="form-group">
             <label for="country" class="col-sm-3 control-label">จังหวัด</label>
             <div class="col-sm-9">
-                <input type="province_bill" id="province_bill" placeholder="" class="form-control" name="member_seller_province_bill">
+                <input type="province_bill" id="province_bill" placeholder="" class="form-control" name="mem_seller_province_bill">
             </div>
         </div>
         <div class="form-group">
