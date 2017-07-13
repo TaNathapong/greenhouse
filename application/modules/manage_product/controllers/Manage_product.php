@@ -18,7 +18,7 @@ class manage_product extends MX_Controller {
 		$this->init_sys->content($data);
     }
 
-    public function add_auc_prouduct_page()
+    public function add_auc_page()
     {
         $data['content']='Manage_product/add_auc_product';
 		$this->init_sys->content($data);
