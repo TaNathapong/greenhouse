@@ -11,10 +11,9 @@ class Member_shipping_model extends CI_Model{
         	'mem_shipper_username' 				=> $this->input->post('mem_shipper_username'),
      		'mem_shipper_password' 				=> $this->input->post('mem_shipper_password'),
             'created'       					=> $timestam,
-            'lastupdate'    					=> $timestam,
-            'mem_shipping_pic'      			=> $mem_shipping_pic
-
+            'last_update'    					=> $timestam
             );
+      
 		$this->db->insert('member_shipper',$input);
 	}
 	

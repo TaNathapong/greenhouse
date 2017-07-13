@@ -171,7 +171,7 @@ echo form_open_multipart('member/add_regis_shipping',$attr);
         <div class="form-group">
             <div class="col-sm-9"></div>
             <div class="col-sm-3">
-                <a type="submit" class="btn btn-info btn-block" href="">สมัครสมาชิก</a>
+                <button type="submit" class="btn btn-info btn-block" href="">สมัครสมาชิก</button>
             </div>
         </div>
 </div> <!-- ./container -->

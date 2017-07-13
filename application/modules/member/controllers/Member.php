@@ -17,12 +17,12 @@ class Member extends MX_Controller {
     }
 
     public function add_regis_shipping(){
-		$this->load->models('Member_shipping_model');
-        $this->Member_Shipping_model->add_regis_shipping();
-		//redirect('member/comfirm_page');
+		$this->load->model('Member_shipping_model');
+        $this->Member_shipping_model->add_regis_shipping();
+		redirect('member/comfirm_page');
 	}
 	public function get_regis_shipping (){
-		$this->load->models('Member_shipping_model');
+		$this->load->model('Member_shipping_model');
 		$result = $this->Member_shipping_model->get_regis_shipping();
 		echo '<pre>', print_r($result);
 		return $result;
