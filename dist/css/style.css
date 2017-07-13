@@ -339,17 +339,13 @@ body {
 .promo-area {
     background: none repeat scroll 0 0 #fff;
     color: #38B839;
-    padding: 25px 0 50px;
+    padding: 25px 0 25px;
 }
 
 .brands-area {
     background: none repeat scroll 0 0 #38B839;
     color: #fff;
     padding: 25px 0 100px;
-}
-
-.promo-area .zigzag-bottom, .brands-area .zigzag-bottom {
-    background: #fff
 }
 
 .single-promo {
