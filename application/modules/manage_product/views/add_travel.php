@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php $attr = array('class' => 'form-horizontal');
 echo form_open_multipart('Manage_product/save_travel',$attr); ?>
 <!DOCTYPE html>
@@ -49,3 +50,6 @@ echo form_open_multipart('Manage_product/save_travel',$attr); ?>
 </body>
 </html>
 <?php echo form_close(); ?>
+=======
+Hello
+>>>>>>> 55f5452a21cf2f3a9cecb853d53d9b965efd88df
