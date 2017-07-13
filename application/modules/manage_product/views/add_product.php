@@ -1,42 +1,24 @@
+<?php $attr = array('class' => 'form-horizontal');
+echo form_open_multipart('Manage_product/set_product_profile_page', $attr);?>
+
 <div class="single-product-area">
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
-                <div class="single-sidebar">
-                    <h2 class="sidebar-title">สินค้าที่เคยลง</h2>
-                    <ul>
-                        <li><a href="" class="text-center" ><img src="<?php echo site_url('img/Dark-Green.jpeg');?>" width="100px" height="100px"><br>ผักสลัดกรีนโอ๊ค</a></li>
-                        <li><a href="" class="text-center" ><img src="<?php echo site_url('img/bell_chilli.jpg');?>" width="100px" height="100px"><br>พริกหวาน</a></li>
-                        <li><a href="" class="text-center" ><img src="<?php echo site_url('img/broccoli.jpg');?>" width="100px" height="100px"><br>บล็อคโคลี่</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <div class="product-content-right">
-                    <div class="product-breadcroumb text-right">
-                        <a href="<?php echo site_url('index.php');?>">หน้าแรก</a>
-                        <a href="<?php echo site_url('shop.php');?>">ผัก</a>
-                    </div>
-
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="w3-content" style="max-width:1200px">
-                                <img class="mySlides" src="<?php echo base_url('img/IMG_0031.jpg');?>" style="width:100%">
-                                <img class="mySlides" src="<?php echo base_url('img/815723638.jpg');?>"style="width:100%">
-                                <img class="mySlides" src="<?php echo base_url('img/image00415.jpg');?>" style="width:100%">
-
-                                <div class="w3-row-padding w3-section">
-                                    <div class="w3-col s3">
-                                        <img class="demo w3-opacity w3-hover-opacity-off" src="<?php echo base_url('img/IMG_0031.jpg');?>" style="width:100%" onclick="currentDiv(1)">
-                                    </div>
-                                    <div class="w3-col s3">
-                                        <img class="demo w3-opacity w3-hover-opacity-off" src="<?php echo base_url('img/815723638.jpg');?>" style="width:100%" onclick="currentDiv(2)">
-                                    </div>
-                                    <div class="w3-col s3">
-                                        <img class="demo w3-opacity w3-hover-opacity-off" src="<?php echo base_url('img/image00415.jpg');?>" style="width:100%" onclick="currentDiv(3)">
-                                    </div>
-                                </div>
+                            <div class="fileinput fileinput-new card-body card-padding" data-provides="fileinput">
+                                <span class="btn btn-default btn-file m-r-5">
+                                    <span class="fileinput-new">
+                                        <img src="<?php echo base_url ('dist/icon/addButton1.png');?>" width="50%" alt="">
+                                    </span>
+                                    <span class="fileinput-exists">
+                                    </span>
+                                    <input type="file" name="product_pic">
+                                </span>
+                                <span class="fileinput-filename">
+                                </span>
                             </div>
                         </div>
 
@@ -44,42 +26,38 @@
                             <div class="product-inner ">
                                 <div class="form-group">
                                     <label for="sel1">หมวดหมู่สินค้า:</label>
-                                    <select class="form-control" id="sel1">
-                                        <option>ผักออแกรนิค</option>
-                                        <option>ผักปลอดสารพิษ</option>
-                                        <option>ผักไฮโดรโปนิค</option>
+                                    <select class="form-control" name="product_type" id="sel1">
+                                        <option>ผัก</option>
                                         <option>ผลไม้</option>
+                                        <option>สินค้าแปรรูป</option>
+                                        <option>สินค้าพรีเมี่นม</option>
+                                        <option>OTOP</option>
+                                        <option>อุปกรณ์ทางการเกษตร</option>
                                     </select>
                                 </div><br>
                                 <div class="row">
                                     <form action="/action_page.php">
                                         <div class="col-sm-3">ชื่อสินค้า :</div>
-                                        <div class="col-sm-9"><input class="form-control input-sm" type="text" name="productname" style="margin-bottom:5px;"></div><br>
+                                        <div class="col-sm-9">
+                                            <input class="form-control input-sm" id="focusedInput" type="text" name="product_name" style="margin-bottom:5px;">
+                                        </div><br>
                                         <div class="col-sm-3">ชื่อลิงค์ :</div>
-                                        <div class="col-sm-9"><input class="form-control input-sm" type="text" name="linkname"  style="margin-bottom:5px;"></div><br>
+                                        <div class="col-sm-9">
+                                            <input class="form-control input-sm" id="focusedInput" type="text" name="product_link"  style="margin-bottom:5px;">
+                                        </div><br>
                                     </form>
                                 </div><br>
-
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label class="checkbox-inline"><input type="checkbox" value="1">แสดงในหน้าเว็บ</label>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label class="checkbox-inline"><input type="checkbox" value="1">โปรโมต</label>
-                                    </div>
-                                </div><br>
-
                                 <div class="row">
                                     <div class="col-sm-2">ราคา:</div>
-                                    <div class="col-sm-3"><input class="form-control input-sm" type="text" name="productname"  style="margin-bottom:5px;" ></div>
+                                    <div class="col-sm-3"><input class="form-control input-sm" type="text" name="product_price"  style="margin-bottom:5px;" ></div>
                                     <div class="col-sm-2">บาท/</div>
-                                    <div class="col-sm-3"><input class="form-control input-sm" type="text" name="linkname"  style="margin-bottom:5px;"></div>
+                                    <div class="col-sm-3"><input class="form-control input-sm" type="text" name="product_unit"  style="margin-bottom:5px;"></div>
                                     <div class="col-sm-2">หน่วย</div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group">
                                         <label for="comment">รายละเอียด:</label>
-                                        <textarea class="form-control" rows="5" id="detail"></textarea>
+                                        <textarea class="form-control" rows="5" name="product_detail" id="detail"></textarea>
                                     </div>
                                 </div>
 
@@ -224,7 +202,7 @@
                                 <label class="checkbox-inline"><input type="checkbox" value="1">อื่นๆ</label>
                             </div>
                         </div><br>
-                        <div class="text-center"><a href="show-products-seller.html" class="btn btn-success btn-lg">SAVE</a></div>
+                        <div class="text-center"><buttom href="" class="btn btn-success btn-lg" type="submit">บันทึก</buttom></div>
                     </div>
 
                 </div><br><br>
@@ -232,3 +210,4 @@
         </div>
     </div>
 </div>
+<?php echo form_close();?>

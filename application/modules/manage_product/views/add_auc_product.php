@@ -1,3 +1,6 @@
+<?php $attr = array('class' => 'form-horizontal');
+echo form_open_multipart('Manage_product/add_auc_page', $attr);?>
+
 <div class="single-product-area">
     <div class="container">
         <div class="row">
@@ -5,22 +8,18 @@
                 <div class="product-content-right">
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="w3-content" style="max-width:1200px">
-                                <img class="mySlides" src="<?php echo base_url('img/coffee1.jpg');?>" style="width:100%">
-                                <img class="mySlides" src="<?php echo base_url('img/coffee2.jpg');?>" style="width:100%">
-                                <img class="mySlides" src="<?php echo base_url('img/coffee3.jpg');?>" style="width:100%">
 
-                                <div class="w3-row-padding w3-section">
-                                    <div class="w3-col s4">
-                                        <img class="demo w3-opacity w3-hover-opacity-off" src="<?php echo base_url('img/coffee1.jpg');?>" style="width:100%" onclick="currentDiv(1)">
-                                    </div>
-                                    <div class="w3-col s4">
-                                        <img class="demo w3-opacity w3-hover-opacity-off" src="<?php echo base_url('img/coffee2.jpg');?>" style="width:100%" onclick="currentDiv(2)">
-                                    </div>
-                                    <div class="w3-col s4">
-                                        <img class="demo w3-opacity w3-hover-opacity-off" src="<?php echo base_url('img/coffee3.jpg');?>" style="width:100%" onclick="currentDiv(3)">
-                                    </div>
-                                </div>
+                            <div class="fileinput fileinput-new card-body card-padding" data-provides="fileinput">
+                                <span class="btn btn-default btn-file m-r-5">
+                                    <span class="fileinput-new">
+                                        <img src="<?php echo base_url ('dist/icon/addButton1.png');?>" width="50%" alt="">
+                                    </span>
+                                    <span class="fileinput-exists">
+                                    </span>
+                                    <input type="file" name="product_pic">
+                                </span>
+                                <span class="fileinput-filename">
+                                </span>
                             </div>
                         </div>
 
@@ -28,41 +27,31 @@
                             <div class="product-inner ">
                                 <div class="form-group">
                                     <label for="sel1">หมวดหมู่สินค้า:</label>
-                                    <select class="form-control" id="sel1">
+                                    <select class="form-control" name="product_type"  id="sel1">
                                         <option>สินค้าประมูล</option>
-                                        <option>สินค้าพรีเมี่ยม</option>
                                     </select>
                                 </div>
                                 <div class="row">
                                     <form action="/action_page.php">
                                         <div class="col-sm-3">ชื่อสินค้า :</div>
-                                        <div class="col-sm-9"><input class="form-control input-sm" type="text" name="productname" style="margin-bottom: 5px;"></div><br>
+                                        <div class="col-sm-9"><input class="form-control input-sm" type="text" name="product_name" style="margin-bottom: 5px;"></div><br>
                                         <div class="col-sm-3">เวลาในการประมูล :</div>
-                                        <div class="col-sm-3"><input class="form-control input-sm" type="text" name="linkname" style="margin-bottom: 5px;"></div>
+                                        <div class="col-sm-3"><input class="form-control input-sm" type="text" name="product_auc_count" style="margin-bottom: 5px;"></div>
                                         <div class="col-sm-1">ชั่วโมง</div>
-                                        <div class="col-sm-3"><input class="form-control input-sm" type="text" name="linkname" style="margin-bottom: 5px;"></div>
+                                        <div class="col-sm-3"><input class="form-control input-sm" type="text" name="product_auc_count" style="margin-bottom: 5px;"></div>
                                         <div class="col-sm-1">นาที</div><br>
                                     </form>
                                 </div><br>
 
                                 <div class="row">
-                                    <div class="col-sm-6">
-                                        <label class="checkbox-inline"><input type="checkbox" value="1">แสดงในหน้าเว็บ</label>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label class="checkbox-inline"><input type="checkbox" value="1">โปรโมต</label>
-                                    </div>
-                                </div><br>
-
-                                <div class="row">
                                     <div class="col-sm-3">ราคาประมูลเริ่มต้น :</div>
-                                    <div class="col-sm-7"><input class="form-control input-sm" type="text" name="productname" style="margin-bottom: 5px;"></div>
+                                    <div class="col-sm-7"><input class="form-control input-sm" type="text" name="product_auc_cost" style="margin-bottom: 5px;"></div>
                                     <div class="col-sm-2">บาท</div>
                                 </div>
                                 <div class="row" style="padding:10px">
                                     <div class="form-group">
                                         <label for="comment">รายละเอียด:</label>
-                                        <textarea class="form-control" rows="5" id="detail" style="margin-bottom: 5px;"></textarea>
+                                        <textarea class="form-control" rows="5" id="detail" name="product_detail" style="margin-bottom: 5px;"></textarea>
                                     </div>
                                 </div>
 
