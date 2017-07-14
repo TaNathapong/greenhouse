@@ -1,3 +1,6 @@
+<?php $attr = array('class' => 'form-horizontal');
+echo form_open_multipart('Manage_product/edit_product_page', $attr);?>
+
 <div class="single-product-area">
     <div class="container">
         <div class="row">
@@ -5,9 +8,9 @@
                 <div class="single-sidebar">
                     <h2 class="sidebar-title">สินค้าที่เคยลง</h2>
                     <ul>
-                        <li><a href="" class="text-center" ><img src="<?php echo site_url('img/Dark-Green.jpeg');?>" width="100px" height="100px"><br>ผักสลัดกรีนโอ๊ค</a></li>
-                        <li><a href="" class="text-center" ><img src="<?php echo site_url('img/bell_chilli.jpg');?>" width="100px" height="100px"><br>พริกหวาน</a></li>
-                        <li><a href="" class="text-center" ><img src="<?php echo site_url('img/broccoli.jpg');?>" width="100px" height="100px"><br>บล็อคโคลี่</a></li>
+                        <li><a href="" class="text-center" ><img src="<?php echo base_url('img/Dark-Green.jpeg');?>" width="100px" height="100px"><br>ผักสลัดกรีนโอ๊ค</a></li>
+                        <li><a href="" class="text-center" ><img src="<?php echo base_url('img/bell_chilli.jpg');?>" width="100px" height="100px"><br>พริกหวาน</a></li>
+                        <li><a href="" class="text-center" ><img src="<?php echo base_url('img/broccoli.jpg');?>" width="100px" height="100px"><br>บล็อคโคลี่</a></li>
                     </ul>
                 </div>
             </div>
@@ -224,7 +227,7 @@
                                 <label class="checkbox-inline"><input type="checkbox" value="1">อื่นๆ</label>
                             </div>
                         </div><br>
-                        <div class="text-center"><a href="show-products-seller.html" class="btn btn-success btn-lg">SAVE</a></div>
+                        <div class="text-center"><button  class="btn btn-success btn-lg" type="submit">บันทึก</button></div>
                     </div>
 
                 </div><br><br>
@@ -232,3 +235,4 @@
         </div>
     </div>
 </div>
+<?php echo form_close();?>
