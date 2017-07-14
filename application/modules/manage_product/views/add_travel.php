@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 <?php $attr = array('class' => 'form-horizontal');
-echo form_open_multipart('Manage_product/save_travel',$attr); ?>
+echo form_open_multipart('Manage_product/form_validation',$attr); ?>
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -9,7 +9,7 @@ echo form_open_multipart('Manage_product/save_travel',$attr); ?>
 	<title>green house</title>
 </head>
 <body>
-	<form action="" method="post" enctype="multipart/form-data"> <!-- ฟอร์มสำหรับเซฟข้อมูล-->
+	<form action="<?php echo base_url()?>/Manage_product/form_validation" method="post" enctype="multipart/form-data"> <!-- ฟอร์มสำหรับเซฟข้อมูล-->
 
 		<!-- กรอบรอบนอก -->
 		<div align="center" class="container" style="margin-top: 30px;">
@@ -26,6 +26,7 @@ echo form_open_multipart('Manage_product/save_travel',$attr); ?>
     	<div align="left">
     		<label>ชื่อสถานที่:</label><br>
 			<input type="text" name="travel_name" placeholder="ชื่อสถานที่ท่องเที่ยว">	
+			<span class="text-danger"><?php echo form_error("travel_name") ?></span>
     	</div>
     	<!-- สิ้นสุดฟอร์มใส่ชื่อ -->
 
@@ -33,6 +34,7 @@ echo form_open_multipart('Manage_product/save_travel',$attr); ?>
     	<div align="left">
     		<label for="comment">รายละเอียด:</label><br>
 	  		<textarea class="form-control" name="travel_detail" rows="5" id="comment" placeholder="บอกรายละเอียดต่างๆเกี่ยวกับสถานที่ท่องเที่ยวของคุณ" style="width: 100%;"></textarea>
+	  		<span class="text-danger"><?php echo form_error('travel_detail'); ?></span>
     	</div>
     	<!-- สิ้นสุดฟอร์มสำหรับกรอกรายลเอียด -->
 
@@ -42,7 +44,7 @@ echo form_open_multipart('Manage_product/save_travel',$attr); ?>
 		</div>
     	<!-- สิ้นสุดแสดงแผนที่ -->
 		<div align="center">
-    		<button type="submit" name="submit">บันทึกข้อมูล </button>
+    		<button type="submit">บันทึกข้อมูล </button>
     	</div>
 
   		</div>
@@ -50,6 +52,5 @@ echo form_open_multipart('Manage_product/save_travel',$attr); ?>
 </body>
 </html>
 <?php echo form_close(); ?>
-=======
-Hello
->>>>>>> 55f5452a21cf2f3a9cecb853d53d9b965efd88df
+
+
