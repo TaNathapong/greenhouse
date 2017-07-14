@@ -50,5 +50,21 @@ class manage_product extends MX_Controller {
         $data['content']='Manage_product/edit_travel';
 		$this->init_sys->content($data);
     }
+    public function add_travel(){
+        $data['content']='Manage_product/add_travel';
+        $this->init_sys->content($data);
+    }
+    public function form_validation(){ //ฟังชัน save travel
+        //echo("ok");
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules("travel_name","Travel_name",'required|alpha');
+        $this->form_validation->set_rules("travel_detail","Travel_detail",'required|alpha');
+
+        if ($this->form_validation->run()) {
+            //$this->load->model("add_travel");
+        }else {
+            $this->add_travel();
+        }
+    }
 
 }
