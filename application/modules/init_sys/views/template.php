@@ -10,6 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Kanit' rel="stylesheet" type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Athiti' rel="stylesheet" type='text/css'>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -18,14 +19,14 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('dist/css/owl.carousel.css');?>">
-    <link rel="stylesheet" href="<?php echo base_url('dist/css/style.css');?>">
-    <link rel="stylesheet" href="<?php echo base_url('dist/css/responsive.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('dist/css/animate.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('dist/css/flipclock.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('dist/css/flipclock.scss');?>">
-    
+    <link rel="stylesheet" href="<?php echo base_url('dist/css/owl.carousel.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('dist/css/responsive.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('dist/css/style-travel.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('dist/css/style.css');?>">
 
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 </head>
 
 <body >
@@ -49,14 +50,15 @@
     <!-- footer SECTION -->
     <?php $this->load->view('footer'); ?>
 
+    <!-- timer -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
 
     <!-- Bootstrap JS form CDN -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-    <!-- timer -->
-    <script src="<?php echo base_url('dist/js/flipclock.js');?>"></script>
     <!-- jQuery sticky menu -->
     <script src="<?php echo base_url('dist/js/owl.carousel.min.js');?>"></script>
     <script src="<?php echo base_url('dist/js/jquery.sticky.js');?>"></script>
