@@ -44,7 +44,7 @@ class Init_sys extends MX_Controller
 		</div>
 		</div>
 		';
-		$data['content'] ='init_sys/default';
+		$data['content'] ='init_sys/index';
 		$data['product_list'] = $this->Init_model->get_product_list();
 		$this->init_sys->content($data);
 	}
