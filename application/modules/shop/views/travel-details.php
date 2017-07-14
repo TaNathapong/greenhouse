@@ -144,7 +144,7 @@
                             foreach ($travel_list as $key => $value)
                             {
                                 ?>
-                                <div class="single-product col-xs-6 col-md-12">
+                                <div class="single-product img-thumbnail col-xs-6 col-md-12">
                                     <div class="product-f-image">
                                         <img src="../<?php echo $value['travel_pic'];?>" style="height: 100%px; width: 100%" alt="">
                                     </div>

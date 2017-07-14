@@ -37,6 +37,24 @@ class Member_seller_model extends CI_Model {
 		return $result;
 	}
 
+	public function add_product_detail(){	//ดึงลง DB
+			$timestam = date('Y-m-d H:i:s');
+			$input = array(
+				'product_name' 					=> $this->input->post('product_name'),
+				'product_price' 				=> $this->input->post('product_price'),
+				'product_unit' 					=> $this->input->post('product_unit'),
+            	'created'       				=> $timestam,
+            	'last_update'    				=> $timestam
+				);
+
+				$this->db->insert('product',$input);
+		}
+
+	public function get_product_detail(){
+		$result = $this->db->get('product',$input)->result_array();
+		return $result;
+	}
+
 	public function get_seller_data_detail($id){
 			$result = $this->db->select('*')
 			->where('mem_seller_id',$mem_seller_id)

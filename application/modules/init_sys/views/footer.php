@@ -16,20 +16,18 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="footer-menu">
-                    <h2 class="footer-wid-title">User Navigation </h2>
+                    <h2 class="footer-wid-title" style="font-family:Athiti">User Navigation </h2>
                     <ul>
                         <li><a href="#">บัญชีของฉัน</a></li>
-                        <li><a href="#">Order history</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                        <li><a href="#">Vendor contact</a></li>
-                        <li><a href="#">Front page</a></li>
+                        <li><a href="#">ประวัติการสั่งซื้อ</a></li>
+                        <li><a href="#">รายการที่ชอบ</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="col-md-3 col-sm-6">
                 <div class="footer-menu">
-                    <h2 class="footer-wid-title">ประเภทสินค้า</h2>
+                    <h2 class="footer-wid-title" style="font-family:Athiti">ประเภทสินค้า</h2>
                     <ul>
                         <li><a href="#">ผัก</a></li>
                         <li><a href="#">ผลไม้</a></li>
@@ -43,7 +41,7 @@
 
             <div class="col-md-3 col-sm-6">
                 <div class="footer-newsletter">
-                    <h2 class="footer-wid-title">Newsletter</h2>
+                    <h2 class="footer-wid-title" style="font-family:Athiti">Newsletter</h2>
                     <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
                     <div class="newsletter-form">
                         <form action="#">

@@ -62,15 +62,50 @@ class manage_product extends MX_Controller {
     }
     public function form_validation(){ //ฟังชัน save travel
         //echo("ok");
+        $url=$this->insert_pic();
         $this->load->library('form_validation');
         $this->form_validation->set_rules("travel_name","Travel_name",'required|alpha');
         $this->form_validation->set_rules("travel_detail","Travel_detail",'required|alpha');
-
         if ($this->form_validation->run()) {
-            //$this->load->model("add_travel");
+            $this->load->model("Save_travel");
+            $id = rand(1000,9000);
+            $formData = array(
+                "travel_id"=>$id,
+                "travel_name"=>$this->input->post("travel_name"),
+                "travel_detail"=>$this->input->post("travel_detail"),
+                "travel_pic"=>$url,
+                "travel_lat"=>"test",
+                "travel_long"=>"test",
+                "created"=>date('Y-m-d H:i:s'),
+                "last_update"=>date('Y-m-d H:i:s'),
+                );
+            $this->Save_travel->insert_data($formData);
+            echo("save data seccucs");
+            //$this->add_travel();
         }else {
             $this->add_travel();
         }
+    }
+    public function inserted(){
+        $data['content']='Manage_product/add_travel';
+        $this->init_sys->content($data);
+    }
+    public function insert_pic(){
+        $type=explode('.', $_FILES["travel_pic"]["name"]);
+        $type=$type[count($type)-1];
+        $url = "./image_gh/".uniqid(rand()).".".$type;
+            if (in_array($type,array("jpg","png","gif"))) {
+                if (is_uploaded_file($_FILES["travel_pic"]["tmp_name"])) {
+                   if( move_uploaded_file($_FILES["travel_pic"]["tmp_name"],$url)){
+                        return $url;
+                       }else{
+
+                       }
+                }else{
+                    retrun();
+                }
+            }
+            
     }
 
 }
