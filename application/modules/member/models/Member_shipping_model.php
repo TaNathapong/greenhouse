@@ -3,7 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Member_shipping_model extends CI_Model{
 
-
 	public function add_regis_shipping(){
         $timestam = date('Y-m-d H:i:s');
         $input = array(
@@ -13,10 +12,10 @@ class Member_shipping_model extends CI_Model{
             'created'       					=> $timestam,
             'last_update'    					=> $timestam
             );
-      
+
 		$this->db->insert('member_shipper',$input);
 	}
-	
+
 	public function get_regis_shipping(){
 		$result = $this->db->get('member_shipper')->result_array();
 		return $result;

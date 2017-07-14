@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Member_seller_model extends CI_Model {
-	
-	public function add_regis_seller($input){
+
+	public function add_regis_seller($input){	//ดึงลง DB
 			$timestam = date('Y-m-d H:i:s');
 			$input = array(
 				'mem_seller_name' 				=> $this->input->post('mem_seller_name'),
@@ -28,7 +28,7 @@ class Member_seller_model extends CI_Model {
             	'created'       				=> $timestam,
             	'last_update'    				=> $timestam
 				);
-			
+
 				$this->db->insert('member_seller',$input);
 		}
 
