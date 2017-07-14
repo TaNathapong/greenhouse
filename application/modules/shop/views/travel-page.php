@@ -1,3 +1,5 @@
+<title>การท่องเที่ยว - GreenHouse</title>
+
 <div class="container" style="padding: 25px;">
     <h3>การท่องเที่ยวที่แนะนำ</h3>
     <div class="row row-margin-bottom">

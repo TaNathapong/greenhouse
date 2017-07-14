@@ -10,6 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Kanit' rel="stylesheet" type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Athiti' rel="stylesheet" type='text/css'>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
