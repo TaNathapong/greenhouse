@@ -1,6 +1,8 @@
 <div class="container">
+    <form class="form-horizontal" role="form"><br>
+      <h1 align="center">ยืนยันการสมัครสมาชิก</h1>
         <h2>กรุณาเลือกวิธียืนยัน</h2>
-        <div class="row col-sm-2"></div>
+        <div class="row col-sm-1"></div>
         <div class="col-sm-4">
             <div class="thumbnail">
                 <center>
@@ -15,7 +17,7 @@
             </div>
             </div>
         </div>
-      
+        <div class="col-sm-1"></div>
         <div class="row col-sm-4">
             <div class="thumbnail">
                 <center>
@@ -28,11 +30,15 @@
                     </div>
                 </center>
             </div>
+            </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         </div>
-
-        <div class="col-sm-2"></div>
-        <br/>
-        <br/>
-        <br/>
-        </div>
+    </form> <!-- /form -->
 </div>

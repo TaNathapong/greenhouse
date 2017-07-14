@@ -1,5 +1,5 @@
 <?php $attr = array('class' => 'form-horizontal');
-echo form_open_multipart('Manage_product/add_auc_page', $attr);?>
+echo form_open_multipart('Manage_product/set_auc_profile_page', $attr);?>
 
 <div class="single-product-area">
     <div class="container">
@@ -198,7 +198,7 @@ echo form_open_multipart('Manage_product/add_auc_page', $attr);?>
                                 <label class="checkbox-inline"><input type="checkbox" value="1">อื่นๆ</label>
                             </div>
                         </div><br>
-                        <div class="text-center"><a href="auction-detail.html" class="btn btn-success btn-lg">SAVE</a></div>
+                        <div class="text-center"><button class="btn btn-success btn-lg" type="submit">บันทึก</a></div>
                     </div>
 
                 </div><br><br>
@@ -206,3 +206,4 @@ echo form_open_multipart('Manage_product/add_auc_page', $attr);?>
         </div>
     </div>
 </div>
+<?php echo form_close();?>
