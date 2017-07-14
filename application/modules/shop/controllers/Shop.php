@@ -37,7 +37,7 @@ class Shop extends MX_Controller {
 	}
 
 	public function travel_details_page() {
-		$data['content']='shop/product-details';
+		$data['content']='shop/travel-details';
 		$travel_id = $this->uri->segment(3);
 		$data['travel_list'] = $this->Travel_model->get_travel_list();
 		$data['travel_details'] = $this->Travel_model->get_travel_details($travel_id);

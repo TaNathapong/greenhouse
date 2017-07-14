@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?php echo base_url('dist/css/responsive.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('dist/css/style-travel.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('dist/css/style.css');?>">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
 </head>
 

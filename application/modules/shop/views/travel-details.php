@@ -1,23 +1,19 @@
 <div class="container" >
-    <div class="product-content-right" style="margin-top: 25px; margin-bottom: 25px">
-        <?php foreach ($product_details as $key => $value)
+    <div class="travel-content-right" style="margin-top: 25px; margin-bottom: 25px">
+        <?php foreach ($travel_details as $key => $value)
         {
             ?>
-            <title><?php echo $value['product_name'];?> - GreenHouse</title>
+            <title><?php echo $value['travel_name'];?> - GreenHouse</title>
             <div class="row">
                 <div class="col-sm-6 text-center">
-                    <h1 class="text-left"><?php echo $value['product_name'];?></h1>
+                    <h1 class="text-left"><?php echo $value['travel_name'];?></h1>
                     <div class="row">
-                        <img src="../<?php echo $value['product_pic'];?>" style="padding: 10px; width:50%">
-                    </div>
-                    <div class="row" style="margin-bottom: 15px">
-                        <a href="follow-product.html" class="btn btn-info btn-s"><i class="fa fa-heart"></i>&nbsp;ติดตามสินค้า</a>
-                        <a href="promote.html" class="btn btn-info btn-s">โปรโมต</a>
+                        <img src="../<?php echo $value['travel_pic'];?>" style="padding: 10px; width:100%">
                     </div>
                 </div>
 
                 <div class="col-sm-6">
-                    <div class="product-inner">
+                    <div class="travel-inner">
                         <div class="row">
                             <div class="col-sm-12">
                                 <img src="../../../dist/img/facebook.png">
@@ -28,11 +24,9 @@
                         </div>
                         <br/>
                         <div class="row">
-                            <div class="col-sm-2 col-xs-2">
-                                <h4>ราคา :</h4>
-                            </div>
-                            <div class="col-sm-10 col-xs-10">
-                                <h4><?php echo $value['product_price'];?> บาท / <?php echo $value['product_unit'];?></h4>
+                            <div class="col-sm-12">
+                                <h4>รายละเอียด</h4>
+                                <p><?php echo $value['travel_detail'];?></p>
                             </div>
                         </div>
 
@@ -51,7 +45,7 @@
 
                         <div class="rating-block">
                             <h4>Rating</h4>
-                            <h3 class="bold padding-bottom-7"><?php echo $value['product_rate'];?> <small>/ 5</small></h3>
+                            <h3 class="bold padding-bottom-7"><?php echo $value['travel_rate'];?> <small>/ 5</small></h3>
                             <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
                                 <i class="fa fa-star" aria-hidden="true"></i></span>
                             </button>
@@ -96,7 +90,7 @@
                                             </header>
                                             <div class="comment-post" style="padding: 10px">
                                                 <p>
-                                                    มันน่ากินมากกกกกกกกกก
+                                                    มันน่าไปมากกกกกกกกกก
                                                 </p>
                                             </div>
                                             <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> ตอบกลับ</a></p>
@@ -120,7 +114,7 @@
                                             </header>
                                             <div class="comment-post" style="padding: 10px">
                                                 <p>
-                                                    ซื้อเลย ตัวเอง >//<
+                                                    ไปด้วยกันมั้ย ตัวเอง >//<
                                                 </p>
                                             </div>
                                             <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> ตอบกลับ</a></p>
@@ -142,29 +136,22 @@
             <!-- <div class="col-xs-2"></div> -->
             <div class="col-md-12 col-xs-12">
                 <div class="latest-product">
-                    <h4>สินค้าที่เกี่ยวข้อง</h4>
+                    <h4>สถานทีน่าสนใจ</h4>
                     <div class="product-carousel">
                         <?php
-                        foreach ($product_list as $key => $value)
+                        for($i=1;$i<=2;$i++)
                         {
-                            ?>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="../<?php echo $value['product_pic'];?>" alt="">
-                                    <div class="product-hover">
-                                        <a href="cart.html" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> ใส่ลงตะกร้า</a>
-                                        <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>" class="view-details-link"><i class="fa fa-link"></i> ดูรายละเอียด</a>
+                            foreach ($travel_list as $key => $value)
+                            {
+                                ?>
+                                <div class="single-product col-xs-6 col-md-12">
+                                    <div class="product-f-image">
+                                        <img src="../<?php echo $value['travel_pic'];?>" style="height: 100%px; width: 100%" alt="">
                                     </div>
+                                    <h2><a href="<?php echo site_url('shop/travel_details_page/'.$value['travel_id']);?>"><?php echo $value['travel_name'];?></a></h2>
                                 </div>
-
-                                <h2>
-                                    <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>"><?php echo $value['product_name'];?></a>
-                                </h2>
-                                <div class="promo-price">
-                                    <ins><?php echo $value['product_price'];?> บาท</ins>
-                                </div>
-                            </div>
-                            <?php
+                                <?php
+                            }
                         }
                         ?>
                     </div>

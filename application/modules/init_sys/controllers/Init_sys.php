@@ -30,9 +30,13 @@ class Init_sys extends MX_Controller
 
 	public function index()
 	{
-
+		$this->load->module('init_sys/Init_sys');
+		$this->load->model('Init_model');
 		$data['content'] ='init_sys/default';
-		$this->content($data);
+		$data['product_list'] = $this->Init_model->get_product_list();
+		$this->init_sys->content($data);
 	}
+
+
 
 }//end class

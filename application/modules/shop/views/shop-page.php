@@ -26,7 +26,7 @@
                             ?>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="<?php echo $value['product_pic'];?>" alt="">
+                                    <img src="../../<?php echo $value['product_pic'];?>" alt="">
                                     <div class="product-hover">
                                         <a href="cart.html" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> ใส่ลงตะกร้า</a>
                                         <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>" class="view-details-link"><i class="fa fa-link"></i> ดูรายละเอียด</a>
@@ -63,7 +63,7 @@
                             ?>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="<?php echo $value['product_pic'];?>" alt="">
+                                    <img src="../../<?php echo $value['product_pic'];?>" alt="">
                                     <div class="product-hover">
                                         <a href="cart.html" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> ใส่ลงตะกร้า</a>
                                         <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>" class="view-details-link"><i class="fa fa-link"></i> ดูรายละเอียด</a>
@@ -102,7 +102,7 @@
                                 ?>
                                 <div class="single-product" style="padding:10px;">
                                     <div class="product-f-image">
-                                        <img src="<?php echo $value['product_pic'];?>" alt="">
+                                        <img src="../../<?php echo $value['product_pic'];?>" alt="">
                                         <div class="product-hover">
                                             <a href="auction-detail.html" class="add-to-cart-link"><i class="fa fa-gavel" aria-hidden="true"></i>&nbsp;ประมูลเลย</a>
                                         </div>
@@ -153,7 +153,7 @@
                                 <div class="single-shop-product">
                                     <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>">
                                         <div class="product-upper">
-                                            <img src="<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
+                                            <img src="../../<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
                                         </div>
                                     </a>
 
@@ -182,7 +182,7 @@
                                     <div class="single-shop-product">
                                         <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>">
                                             <div class="product-upper">
-                                                <img src="<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
+                                                <img src="../../<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
                                             </div>
                                         </a>
 
@@ -212,7 +212,7 @@
                                     <div class="single-shop-product">
                                         <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>">
                                             <div class="product-upper">
-                                                <img src="<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
+                                                <img src="../../<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
                                             </div>
                                         </a>
 
@@ -242,7 +242,7 @@
                                     <div class="single-shop-product">
                                         <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>">
                                             <div class="product-upper">
-                                                <img src="<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
+                                                <img src="../../<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
                                             </div>
                                         </a>
 
@@ -272,7 +272,7 @@
                                     <div class="single-shop-product">
                                         <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>">
                                             <div class="product-upper">
-                                                <img src="<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
+                                                <img src="../../<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
                                             </div>
                                         </a>
 
@@ -302,7 +302,7 @@
                                     <div class="single-shop-product">
                                         <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>">
                                             <div class="product-upper">
-                                                <img src="<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
+                                                <img src="../../<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
                                             </div>
                                         </a>
 
@@ -332,7 +332,7 @@
                                     <div class="single-shop-product">
                                         <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>">
                                             <div class="product-upper">
-                                                <img src="<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
+                                                <img src="../../<?php echo $value['product_pic'];?>" class="img-thumbnail" alt="">
                                             </div>
                                         </a>
 
