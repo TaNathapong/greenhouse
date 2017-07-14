@@ -44,13 +44,13 @@ echo form_open_multipart('member/add_regis_shipping',$attr);
         <div class="form-group">
             <label for="subdistric" class="col-sm-3 control-label">ตำบล</label>
             <div class="col-sm-9">
-                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_subdistric">
+                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_subdistrict">
             </div>
         </div>
         <div class="form-group">
             <label for="distric" class="col-sm-3 control-label">อำเภอ</label>
             <div class="col-sm-9">
-                <input type="text" id="email" placeholder="" class="form-control" name="mem_shipper_distric">
+                <input type="text" id="email" placeholder="" class="form-control" name="mem_shipper_district">
             </div>
         </div>
         <div class="form-group">
@@ -74,7 +74,10 @@ echo form_open_multipart('member/add_regis_shipping',$attr);
         <div class="form-group">
             <label class="col-md-3 control-label" for="address">รูปกิจการ</label>
             <div class="col-md-9">
-                <input type="file" name="mem_shipper_bussiness_pic">
+                <span class="fileinput-exists">Change</span>
+                    <input type="file" name="upload_file">
+                <span class="fileinput-filename"></span>
+                <a href="#" class="close fileinput-exists" data-dismiss="fileinput">&times;</a>
             </div>
         </div>
         <div class="form-group">
@@ -146,13 +149,13 @@ echo form_open_multipart('member/add_regis_shipping',$attr);
         <div class="form-group">
             <label for="subdistric" class="col-sm-3 control-label">ตำบล</label>
             <div class="col-sm-9">
-                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_subdistric_bill">
+                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_subdistrict_bill">
             </div>
         </div>
         <div class="form-group">
             <label for="distric" class="col-sm-3 control-label">อำเภอ</label>
             <div class="col-sm-9">
-                <input type="text" id="email" placeholder="" class="form-control" name="mem_shipper_distric_bill">
+                <input type="text" id="email" placeholder="" class="form-control" name="mem_shipper_district_bill">
             </div>
         </div>
         <div class="form-group">

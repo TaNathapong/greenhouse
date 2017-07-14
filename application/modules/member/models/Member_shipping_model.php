@@ -12,11 +12,10 @@ class Member_shipping_model extends CI_Model{
                     'txt_unlink'    =>$this->input->post('file_old'),
                     'default_file'  =>'no-image.png'
                 );
-        $mat_pic = $this->myupload->upload_file($prop);
+        $mem_shipper_bussiness_pic = $this->myupload->upload_file($prop);
 
         $timestam = date('Y-m-d H:i:s');
         $input = array(
-            'mem_shipper_id'                    => $mem_shipper_id,
         	'mem_shipper_username' 				=> $this->input->post('mem_shipper_username'),
      		'mem_shipper_password' 				=> $this->input->post('mem_shipper_password'),
             'mem_shipper_status'                => '0',
@@ -27,7 +26,7 @@ class Member_shipping_model extends CI_Model{
             'mem_shipper_subdistrict'           => $this->input->post('mem_shipper_subdistrict'),
             'mem_shipper_district'              => $this->input->post('mem_shipper_district'),
             'mem_shipper_province'              => $this->input->post('mem_shipper_province'),
-            'mem_shipper_postcode'               => $this->input->post('mem_shipper_postcode'),
+            'mem_shipper_postcode'              => $this->input->post('mem_shipper_postcode'),
 
 
             'mem_shipper_address_bill'          => $this->input->post('mem_shipper_address_bill'),
@@ -42,7 +41,7 @@ class Member_shipping_model extends CI_Model{
 
             'mem_shipper_payment'               => $this->input->post('mem_shipper_payment'),
             'mem_shipper_payment_name'          => $this->input->post('mem_shipper_payment_name'),
-            'mem_shipper_payment_id'            => $mem_shipper_payment_id,
+            'mem_shipper_payment_id'            => $this->input->post('mem_shipper_payment_id'),
 
             'mem_shipper_area'                  => $this->input->post('mem_shipper_area'),
             'created'       					=> $timestam,

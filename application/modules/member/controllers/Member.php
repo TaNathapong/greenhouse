@@ -19,7 +19,7 @@ class Member extends MX_Controller {
     public function add_regis_shipping(){
         $this->load->model('Member_shipping_model');
         $this->Member_shipping_model->add_regis_shipping();
-        redirect('member/comfirm_page');
+        redirect('member/confirm_page');
     }
     public function get_regis_shipping (){
         $this->load->model('Member_shipping_model');
@@ -50,10 +50,7 @@ class Member extends MX_Controller {
         $data['content']='member/member-seller-profile';
         $this->init_sys->content($data);
     }
-            public function profile_seller_page(){
-        $data['content']='member/member-seller-profile';
-        $this->init_sys->content($data);
-    }
+   
 
 
 
