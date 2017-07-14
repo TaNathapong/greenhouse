@@ -50,7 +50,7 @@ class manage_product extends MX_Controller {
         $data['content']='Manage_product/edit_travel';
 		$this->init_sys->content($data);
     }
-    public function index(){
+    public function add_travel(){
         $data['content']='Manage_product/add_travel';
         $this->init_sys->content($data);
     }
