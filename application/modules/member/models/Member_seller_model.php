@@ -1,18 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Member_seller_model extends CI_Model {
-	
-	public function add_seller_data($input){
-		{
-			$this->load->module('upload/Myupload');
-			$prop = array(
-                    'upload_path'   =>'./images_compare/',
-                    'allowed_types' =>'jpg|jpeg|png',
-                    'txt_upload'    =>'upload_file',
-                    'txt_unlink'    =>$this->input->post('file_old'),
-                    'default_file'  =>'no-image.png'
-				)
-			$member_seller_pic = $this->myupload->upload_file($prop);
+
+	public function add_regis_seller($input){	//ดึงลง DB
 			$timestam = date('Y-m-d H:i:s');
 			$input = array(
 				'mem_seller_name' 				=> $this->input->post('mem_seller_name'),
@@ -22,31 +12,27 @@ class Member_seller_model extends CI_Model {
 				'mem_seller_tel' 				=> $this->input->post('mem_seller_tel'),
 				'mem_seller_username' 			=> $this->input->post('mem_seller_username'),
 				'mem_seller_password' 			=> $this->input->post('mem_seller_password'),
-				'mem_seller_address' 			=> $this->input->post('mem_seller_address'),
-				'mem_seller_subdistric' 		=> $this->input->post('mem_seller_subdistric'),
-				'mem_seller_distric' 			=> $this->input->post('mem_seller_distric'),
-				'mem_seller_province' 			=> $this->input->post('mem_seller_province'),
-				'mem_seller_postcode' 			=> $this->input->post('mem_seller_postcode'),
 				'mem_seller_address_bill' 		=> $this->input->post('mem_seller_address_bill'),
-				'mem_seller_subdistric_bill' 	=> $this->input->post('mem_seller_subdistric_bill'),
-				'mem_seller_distric_bill' 		=> $this->input->post('mem_seller_distric_bill'),
+				'mem_seller_subdistrict_bill' 	=> $this->input->post('mem_seller_subdistrict_bill'),
+				'mem_seller_district_bill' 		=> $this->input->post('mem_seller_district_bill'),
 				'mem_seller_province_bill' 		=> $this->input->post('mem_seller_province_bill'),
 				'mem_seller_bussiness_name' 	=> $this->input->post('mem_seller_bussiness_name'),
+				'mem_seller_bussiness_address'	=> $this->input->post('mem_seller_bussiness_address'),
+				'mem_seller_bussiness_subdistric'=>$this->input->post('mem_seller_bussiness_subdistric'),
+				'mem_seller_bussiness_distric'	=> $this->input->post('mem_seller_bussiness_distric'),
+				'mem_seller_bussiness_province'	=> $this->input->post('mem_seller_bussiness_province'),
 				'mem_seller_bussiness_detail' 	=> $this->input->post('mem_seller_bussiness_detail'),
 				'mem_seller_payment' 			=> $this->input->post('mem_seller_payment'),
 				'mem_seller_payment_name' 		=> $this->input->post('mem_seller_payment_name'),
 				'mem_seller_payment_id' 		=> $this->input->post('mem_seller_payment_id'),
             	'created'       				=> $timestam,
-            	'lastupdate'    				=> $timestam,
-				'mem_seller_pic' 				=> $mem_seller_pic
-				'mem_seller_bussiness_pic' 		=> $mem_seller_bussiness_pic
+            	'last_update'    				=> $timestam
 				);
-			
+
 				$this->db->insert('member_seller',$input);
 		}
-	}
 
-	public function get_seller_data(){
+	public function get_regis_seller(){
 		$result = $this->db->get('member_seller',$input)->result_array();
 		return $result;
 	}

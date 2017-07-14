@@ -14,7 +14,7 @@ class Init_sys extends MX_Controller
 		return $sess_query;
 	}
 
-	public function content($data='compare/choose-menu')
+	public function content($data='')
 	{
 		$content=$this->load->view($this->init['initbody'], $data);
 		return $content;
