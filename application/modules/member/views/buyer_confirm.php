@@ -1,4 +1,4 @@
-<div class="container">
+s<div class="container">
     <form class="form-horizontal" role="form"><br>
       <h1 align="center">ยืนยันการสมัครสมาชิก</h1>
         <h2>กรุณาเลือกวิธียืนยัน</h2>

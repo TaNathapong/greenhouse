@@ -7,35 +7,38 @@ class Member extends MX_Controller {
         $this->load->module('init_sys/Init_sys');
     }
 
-    public function regis_shipping_page(){
-        $data['content']='member/regis-shipping-member';
-        $this->init_sys->content($data);
-    }
+    // public function regis_shipping_page(){
+    //     $data['content']='member/regis-shipping-member';
+    //     $this->init_sys->content($data);
+    // }
       public function confirm_page(){
         $data['content']='member/confirm-page';
         $this->init_sys->content($data);
     }
 
-    public function add_regis_shipping(){
-        $this->load->model('Member_shipping_model');
-        $this->Member_shipping_model->add_regis_shipping();
-        redirect('member/confirm_page');
-    }
-    public function get_regis_shipping (){
-        $this->load->model('Member_shipping_model');
-        $result = $this->Member_shipping_model->get_regis_shipping();
-        echo '<pre>', print_r($result);
-        return $result;
-    }
+    // public function add_regis_shipping(){
+    //     $this->load->model('Member_shipping_model');
+    //     $this->Member_shipping_model->add_regis_shipping();
+    //     redirect('member/confirm_page');
+    // }
+    // public function get_regis_shipping (){
+    //     $this->load->model('Member_shipping_model');
+    //     $result = $this->Member_shipping_model->get_regis_shipping();
+    //     echo '<pre>', print_r($result);
+    //     return $result;
+    // }
 
 
     public function regis_seller_page(){
         $data['content']='member/member-seller-regist';
+        $data['seller_data'] = $this->get_regis_seller();
         $this->init_sys->content($data);
     }
 
     public function add_regis_seller(){
+        $data['seller_data'] = $this->get_regis_seller();
         $this->load->model('Member_seller_model');
+        $timestam = date('Y-m-d H:i:s');
         $this->Member_seller_model->add_regis_seller();
         redirect('member/confirm_page');
     }
@@ -50,17 +53,41 @@ class Member extends MX_Controller {
         $data['content']='member/member-seller-profile';
         $this->init_sys->content($data);
     }
-   
+    public function post_product_page(){
+        $data['content']='member/post_product';
+        $this->init_sys->content($data);
+    }
+    public function add_post_product(){
+        $this->load->model('Member_seller_model');
+        $timestam = date('Y-m-d H:i:s');
+        $this->Member_seller_model->add_product_detail();
+        redirect('member/confirm_page');
+    }
+
+    public function get_post_product (){
+        $this->load->model('Member_seller_model');
+        $result = $this->Member_seller_model->get_product_detail();
+        echo '<pre>', print_r($result);
+        return $result;
+    }
+    public function my_product_page(){
+        $data['content']='member/my_product';
+        $this->init_sys->content($data);
+    }
+    public function history_sell_page(){
+        $data['content']='member/history_sell';
+        $this->init_sys->content($data);
+    }
 
 
 
 
 
-//     //login แพม
-//       public function login_page(){
-//          $data['content']='member/login_view'; //  ชื่อ   controler/views  >> login
-//          $this->init_sys->content($data);//เรียกวิวให้แสดง
-//       }
+    //login แพม
+      public function login_page(){
+         $data['content']='member/login_view'; //  ชื่อ   controler/views  >> login
+         $this->init_sys->content($data);//เรียกวิวให้แสดง
+      }
 
 //       //ข้อมูลผู้ซื้อ
 //       public function member_buyer_page(){
