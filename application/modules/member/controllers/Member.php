@@ -28,6 +28,7 @@ class Member extends MX_Controller {
         return $result;
     }
 
+
     public function regis_seller_page(){
         $data['content']='member/member-seller-regist';
         $this->init_sys->content($data);
@@ -49,35 +50,41 @@ class Member extends MX_Controller {
         $data['content']='member/member-seller-profile';
         $this->init_sys->content($data);
     }
+            public function profile_seller_page(){
+        $data['content']='member/member-seller-profile';
+        $this->init_sys->content($data);
+    }
 
 
 
-    //login แพม
-      public function login_page(){
-         $data['content']='member/login_view'; //  ชื่อ   controler/views  >> login
-         $this->init_sys->content($data);//เรียกวิวให้แสดง
-      }
 
-      //ข้อมูลผู้ซื้อ
-      public function member_buyer_page(){
-         $data['content']='member/member_buyer';//  ชื่อ   controler/views
-         $this->init_sys->content($data);//เรียกวิวข้อมูลผู้ซื้อ
-      }
 
-      //buyer_confirm
-      public function buyer_confirm_page(){
-         $data['content']='member/buyer_confirm';//  ชื่อ   controler/views
-         $this->init_sys->content($data);//เรียกวิว buyer_confirm
-      }
-      public function add_member_buyer(){ //เพิ่มข้อมูลผู้สมัครซื้อลง DB
-  		    $this->load->model('Member_buyer_model');
-          $this->Member_buyer_model->add_member_buyer();
-  		    redirect('member/confirm_page');
-  	 }
-  	public function get_member_buyer(){//ส่งค่า ข้อมูลที่สมัครซื้อ
-  		$this->load->model('Member_buyer_model');
-  		$result = $this->Member_buyer_model->get_member_buyer();
-  		echo '<pre>', print_r($result);
-  		return $result;
-  	 }
+//     //login แพม
+//       public function login_page(){
+//          $data['content']='member/login_view'; //  ชื่อ   controler/views  >> login
+//          $this->init_sys->content($data);//เรียกวิวให้แสดง
+//       }
+
+//       //ข้อมูลผู้ซื้อ
+//       public function member_buyer_page(){
+//          $data['content']='member/member_buyer';//  ชื่อ   controler/views
+//          $this->init_sys->content($data);//เรียกวิวข้อมูลผู้ซื้อ
+//       }
+
+//       //buyer_confirm
+//       public function buyer_confirm_page(){
+//          $data['content']='member/buyer_confirm';//  ชื่อ   controler/views
+//          $this->init_sys->content($data);//เรียกวิว buyer_confirm
+//       }
+//       public function add_member_buyer(){ //เพิ่มข้อมูลผู้สมัครซื้อลง DB
+//   		    $this->load->model('Member_buyer_model');
+//           $this->Member_buyer_model->add_member_buyer();
+//   		    redirect('member/confirm_page');
+//   	 }
+//   	public function get_member_buyer(){//ส่งค่า ข้อมูลที่สมัครซื้อ
+//   		$this->load->model('Member_buyer_model');
+//   		$result = $this->Member_buyer_model->get_member_buyer();
+//   		echo '<pre>', print_r($result);
+//   		return $result;
+//   	 }
 }
