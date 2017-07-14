@@ -34,13 +34,19 @@ class manage_product extends MX_Controller {
 		$this->init_sys->content($data);
     }
     public function edit_prouduct_page(){
-
+        $product_id = 3;
+        $results = $this->Edit_models->get_product_detail($product_id);
+        $data['product_list'] = $results;
         $data['content']='Manage_product/edit_product';
-        $product_id = $this->uri->segment(3);
         $timestam = date('Y-m-d H:i:s');
-        $data['product_details'] = $this->product_model->get_product_detail($product_id);
         $this->init_sys->content($data);
     }
+    public function set_edit_prouduct_page(){
+        echo '<pre>', print_r($this->input->post());
+        $product_id = 3;
+        $data['product_update'] = $this->Edit_models->update_product_detail($product_id);
+    }
+
     public function edit_auc_prouduct_page(){
 
         $data['content']='Manage_product/edit_auc_product';

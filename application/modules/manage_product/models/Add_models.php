@@ -31,16 +31,16 @@ class Add_models extends CI_Model {
     }
     public function add_product_detail()
     {
-        // $this->load->module('upload/Myupload');
-        // $prop = array(
-        //             'upload_path'   =>'./images_product/',
-        //             'allowed_types' =>'jpg|jpeg|png',
-        //             'txt_upload'    =>'upload_file',
-        //             'txt_unlink'    =>$this->input->post('file_old'),
-        //             'default_file'  =>'no-image.png'
-        //         );
-        //
-        // $product_pic = $this->myupload->upload_file($prop);
+        $this->load->module('upload/Myupload');
+        $prop = array(
+                    'upload_path'   =>'./images_gh/',
+                    'allowed_types' =>'jpg|jpeg|png',
+                    'txt_upload'    =>'upload_file',
+                    'txt_unlink'    =>$this->input->post('file_old'),
+                    'default_file'  =>'no-image.png'
+                );
+
+        $product_pic = $this->myupload->upload_file($prop);
         // $cate_id = $this->session->userdata('select_items_one');
 
         $timestamp = date('Y-m-d H:i:s');
@@ -51,10 +51,10 @@ class Add_models extends CI_Model {
             'product_price' 			=> $this->input->post('product_price'),
             'product_link'   			=> $this->input->post('product_link'),
             'product_detail'			=> $this->input->post('product_detail'),
+            'product_location'   		=> $this->input->post('product_location'),
+            'product_tag'			    => $this->input->post('product_tag'),
             'product_type' 				=> '1',
             'product_status' 			=> '1',
-            // 'product_pic'   			=> $product_pic,
-            // 'product_id'				=> $product_id,
             'created'       	       	=> $timestamp,
             'last_update'    		    => $timestamp,
         );
@@ -65,17 +65,17 @@ class Add_models extends CI_Model {
 
     public function add_auc_detail()
     {
-        // $this->load->module('upload/Myupload');
-        // $prop = array(
-        //             'upload_path'   =>'./images_product/',
-        //             'allowed_types' =>'jpg|jpeg|png',
-        //             'txt_upload'    =>'upload_file',
-        //             'txt_unlink'    =>$this->input->post('file_old'),
-        //             'default_file'  =>'no-image.png'
-        //         );
-        //
-        // $product_pic = $this->myupload->upload_file($prop);
-        // $cate_id = $this->session->userdata('select_items_one');
+        $this->load->module('upload/Myupload');
+        $prop = array(
+                    'upload_path'   =>'./images_gh/',
+                    'allowed_types' =>'jpg|jpeg|png',
+                    'txt_upload'    =>'upload_file',
+                    'txt_unlink'    =>$this->input->post('file_old'),
+                    'default_file'  =>'no-image.png'
+                );
+
+        $product_pic = $this->myupload->upload_file($prop);
+        $cate_id = $this->session->userdata('select_items_one');
 
         $timestamp = date('Y-m-d H:i:s');
         $this->load->model('Add_models');
@@ -86,8 +86,6 @@ class Add_models extends CI_Model {
             'product_auc_cost'			=> $this->input->post('product_auc_cost'),
             'product_type' 				=> '1',
             'product_status' 			=> '1',
-            // 'product_pic'   			=> $product_pic,
-            // 'product_id'				=> $product_id,
             'created'       		=> $timestamp,
             'last_update'    		=> $timestamp,
         );
