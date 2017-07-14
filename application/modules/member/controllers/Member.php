@@ -45,6 +45,11 @@ class Member extends MX_Controller {
         echo '<pre>', print_r($result);
         return $result;
     }
+        public function profile_seller_page(){
+        $data['content']='member/member-seller-profile';
+        $this->init_sys->content($data);
+    }
+
 
 
     //login แพม
