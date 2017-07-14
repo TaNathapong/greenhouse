@@ -1,3 +1,6 @@
+<?php
+$head = "hello world!";
+?>
 <div class="product-big-title-area">
     <div class="container">
         <div class="row">
@@ -15,7 +18,7 @@
         </div>
         <div class="row">
             <div class="product-bit-title text-center">
-                <h2>Hello World!</h2>
+                <h2><?php echo $head;?></h2>
             </div>
         </div>
     </div>

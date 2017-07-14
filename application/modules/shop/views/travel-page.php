@@ -1,3 +1,6 @@
+<?php
+$head = "hello world!";
+?>
 <title>การท่องเที่ยว - GreenHouse</title>
 
 <div class="container" style="padding: 25px;">
