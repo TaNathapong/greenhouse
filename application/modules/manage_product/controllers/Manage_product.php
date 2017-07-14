@@ -63,7 +63,7 @@ class manage_product extends MX_Controller {
         if ($this->form_validation->run()) {
             //$this->load->model("add_travel");
         }else {
-            $this->index();
+            $this->add_travel();
         }
     }
 
