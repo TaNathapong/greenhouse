@@ -3,18 +3,6 @@
 <div class="promo-area">
     <div class="container">
         <div class="row">
-            <div class="search-content text-center">
-                <br/>
-                <h3>ค้นหาสินค้าที่ต้องการ</h3>
-                <br/>
-                <form>
-                    <input type="text" name="search" placeholder="ค้นหา..">
-                </form>
-                <br/>
-                <a href="selling-announcement.html" class="readmore">ลงประกาศ</a>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-xs-2"></div>
             <div class="col-md-12 col-xs-8">
                 <div class="latest-product">

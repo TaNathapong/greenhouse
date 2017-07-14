@@ -8,7 +8,7 @@
                 <div class="col-sm-6 text-center">
                     <h1 class="text-left"><?php echo $value['product_name'];?></h1>
                     <div class="row">
-                        <img src="../<?php echo $value['product_pic'];?>" style="padding: 10px; width:50%">
+                        <img src="../../../<?php echo $value['product_pic'];?>" style="padding: 10px; width:50%">
                     </div>
                     <div class="row" style="margin-bottom: 15px">
                         <a href="follow-product.html" class="btn btn-info btn-s"><i class="fa fa-heart"></i>&nbsp;ติดตามสินค้า</a>
@@ -150,7 +150,7 @@
                             ?>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="../<?php echo $value['product_pic'];?>" alt="">
+                                    <img src="../../../<?php echo $value['product_pic'];?>" alt="">
                                     <div class="product-hover">
                                         <a href="cart.html" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> ใส่ลงตะกร้า</a>
                                         <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>" class="view-details-link"><i class="fa fa-link"></i> ดูรายละเอียด</a>

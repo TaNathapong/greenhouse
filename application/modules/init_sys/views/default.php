@@ -1,5 +1,4 @@
 <style>
-
 .first-title h2 {
     font-family: 'Athiti';
     font-size: 72px;
@@ -111,8 +110,8 @@
 .third-box{padding:10px;background:#F66;}
 .fourth-box{padding:10px;background:#6CC;}
 </style>
-<!-- content-->
 
+<!-- content-->
 <div class="container">
 
     <div class="row" style="padding:10px;">
@@ -279,6 +278,6 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 5000);
+    setTimeout(carousel, 3000);
 }
 </script>

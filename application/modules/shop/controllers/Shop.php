@@ -12,8 +12,20 @@ class Shop extends MX_Controller {
 
 	public function shop_page() {
 		$data['content']='shop/shop-page';
+		$data['head']='
+		<div class="row">
+		<div class="col-md-2"></div>
+		<div class="search-content text-center col-md-8">
+		<h3>ค้นหาสินค้าที่ต้องการ</h3>
+		<form>
+		<input type="text" name="search" placeholder="ค้นหา..">
+		</form>
+		<a href="selling-announcement.html" class="readmore">ลงประกาศ</a>
+		</div>
+		</div>
+		';
 		$data['product_list'] = $this->Shop_model->get_product_list();
-		// echo print_r($data['product_list']);
+		// echo print_r($data['head']);
 		// exit();
 		$this->init_sys->content($data);
 	}
@@ -23,6 +35,7 @@ class Shop extends MX_Controller {
 		$product_id = $this->uri->segment(3);
 		$data['product_list'] = $this->Shop_model->get_product_list();
 		$data['product_details'] = $this->Shop_model->get_product_details($product_id);
+		$data['head']='สินค้า';
 		// echo print_r($data['product_details']);
 		// exit();
 		$this->init_sys->content($data);
@@ -30,6 +43,7 @@ class Shop extends MX_Controller {
 
 	public function travel_page() {
 		$data['content']='shop/travel-page';
+		$data['head']='การท่องเที่ยว';
 		$data['travel_list'] = $this->Travel_model->get_travel_list();
 		// echo print_r($data['travel_list']);
 		// exit();
@@ -41,6 +55,7 @@ class Shop extends MX_Controller {
 		$travel_id = $this->uri->segment(3);
 		$data['travel_list'] = $this->Travel_model->get_travel_list();
 		$data['travel_details'] = $this->Travel_model->get_travel_details($travel_id);
+		$data['head']='สถานที่ท่องเที่ยว';
 		// echo print_r($data['travel_details']);
 		// exit();
 		$this->init_sys->content($data);
