@@ -101,7 +101,7 @@
                         ?>
                         <div class="single-product">
                             <div class="product-f-image">
-                                <img src="<?php echo $value['product_pic'];?>" alt="">
+                                <img src="../../<?php echo $value['product_pic'];?>" alt="">
                                 <div class="product-hover">
                                     <a href="cart.html" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> ใส่ลงตะกร้า</a>
                                     <a href="<?php echo site_url('shop/product_details_page/'.$value['product_id']);?>" class="view-details-link"><i class="fa fa-link"></i> ดูรายละเอียด</a>
