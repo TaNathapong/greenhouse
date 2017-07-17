@@ -43,7 +43,8 @@ class Shop extends MX_Controller {
 
 	public function travel_page() {
 		$data['content']='shop/travel-page';
-		$data['head']='การท่องเที่ยว';
+	
+	
 		$data['travel_list'] = $this->Travel_model->get_travel_list();
 		// echo print_r($data['travel_list']);
 		// exit();
@@ -59,6 +60,11 @@ class Shop extends MX_Controller {
 		// echo print_r($data['travel_details']);
 		// exit();
 		$this->init_sys->content($data);
+	}
+	public function cart_page(){
+		$data['head']='เพิ่มสถานที่ท่องเที่ยว';
+        $data['content']='Shop/cart';
+        $this->init_sys->content($data);
 	}
 
 }

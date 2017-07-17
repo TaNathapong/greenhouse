@@ -10,7 +10,7 @@ echo form_open_multipart('Manage_product/form_validation',$attr); ?>
 	<style type="text/css">
 		#ohbox{
 			border:solid 1px;
-			border-color: gray;
+			border-color: green;
 			border-radius: 5px;
 			height: 300px;
 			padding-top: 50px;
@@ -24,10 +24,10 @@ echo form_open_multipart('Manage_product/form_validation',$attr); ?>
 	</style>
 </head>
 <body>
-	<form action="<?php echo base_url()?>/Manage_product/form_validation" method="post" enctype="multipart/form-data"> <!-- ฟอร์มสำหรับเซฟข้อมูล-->
+	<form action="<?php echo base_url(); ?>" method="post" enctype="multipart/form-data"> <!-- ฟอร์มสำหรับเซฟข้อมูล-->
 		<!-- กรอบรอบนอก -->
 		<div align="center" class="container" style="margin-top: 30px;">
-			<div align="left" style="font-size: 20pt;">ข้อมูลต่างๆ</div>
+			<div align="left" style="font-size: 20pt;">ข้อมูล</div>
 			<div class="col-md-6">
 				<!-- ฟอร์มเพิ่มรูปภาพ -->
 		 		<div id="ohbox">
@@ -44,7 +44,7 @@ echo form_open_multipart('Manage_product/form_validation',$attr); ?>
 					<!-- ฟอร์มใส่ชื่อ -->
 			    	<div align="left">
 			    		<label>ชื่อสถานที่:</label><br>
-						<input type="text" name="travel_name" placeholder="ชื่อสถานที่ท่องเที่ยว">	
+						<input type="text" name="travel_name" placeholder="ชื่อสถานที่ท่องเที่ยว" required="true">	
 						<span class="text-danger"><?php echo form_error("travel_name") ?></span>
 			    	</div>
 			    	<!-- สิ้นสุดฟอร์มใส่ชื่อ -->
@@ -52,7 +52,7 @@ echo form_open_multipart('Manage_product/form_validation',$attr); ?>
 			    	<!-- ฟอร์มสำหรับกรอกรายละเอียด -->
 			    	<div align="left">
 			    		<label for="comment">รายละเอียด:</label><br>
-				  		<textarea class="form-control" name="travel_detail" rows="8" id="comment" placeholder="บอกรายละเอียดต่างๆเกี่ยวกับสถานที่ท่องเที่ยวของคุณ" style="width: 100%;"></textarea>
+				  		<textarea class="form-control" name="travel_detail" rows="8" id="comment" placeholder="บอกรายละเอียดต่างๆเกี่ยวกับสถานที่ท่องเที่ยวของคุณ" style="width: 100%;" required="true"></textarea>
 				  		<span class="text-danger"><?php echo form_error('travel_detail'); ?></span>
 			    	</div>
 			    	<!-- สิ้นสุดฟอร์มสำหรับกรอกรายลเอียด -->
