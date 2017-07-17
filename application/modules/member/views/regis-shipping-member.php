@@ -6,73 +6,92 @@ echo form_open_multipart('member/add_regis_shipping',$attr);
 
 <div class="container">
     <br/>
-        <h2 style="color: Green">ข้อมูลของผู้ขนส่ง</h2>
+        <h2 style="color: Green">ข้อมูลส่วนตัว</h2>
         <hr/>
+        <div class="form-group">
+            <label for="address" class="col-sm-3 control-label">ชื่อ-สกุล</label>
+            <div class="col-sm-9">
+                <input type="text" id="shipper_name" placeholder="" class="form-control" name="mem_shipper_name" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address" class="col-sm-3 control-label">รหัสบัตรประชาชน</label>
+            <div class="col-sm-9">
+                <input type="text" id="shipper_idcard" placeholder="" class="form-control" name="mem_shipper_idcard" maxlength="13" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address" class="col-sm-3 control-label">วันเกิด</label>
+            <div class="col-sm-9">
+                <input type="date" id="shipper_birth" placeholder="" class="form-control" name="mem_shipper_birth" >
+            </div>
+        </div>
+
         <div class="form-group">
             <label for="address" class="col-sm-3 control-label">ชื่อผู้ใช้</label>
             <div class="col-sm-9">
-                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_username" >
+                <input type="text" id="shipper_username" placeholder="" class="form-control" name="mem_shipper_username" >
             </div>
         </div>
         <div class="form-group">
             <label for="address" class="col-sm-3 control-label">รหัสผ่าน</label>
             <div class="col-sm-9">
-                <input type="password" id="password" placeholder="" class="form-control" name="mem_shipper_password" style="width: 595px">
+                <input type="password" id="shipper_password" placeholder="" class="form-control" name="mem_shipper_password" style="width: 595px">
             </div>
         </div>
          <div class="form-group">
             <label for="address" class="col-sm-3 control-label">ยืนยันรหัสผ่าน</label>
             <div class="col-sm-9">
-                <input type="password" id="password" placeholder="" class="form-control" name="mem_shipper_password" style="width: 595px">
+                <input type="password" id="shipper_password" placeholder="" class="form-control" name="mem_shipper_password" style="width: 595px">
             </div>
         </div>
 
         <hr/>
-        <h3>ข้อมูลกิจการ</h3>
+        <h3>ที่อยู่กิจการขนส่ง</h3>
         <div class="form-group">
-            <label for="address" class="col-sm-3 control-label">ชื่อกิจการ</label>
+            <label for="address" class="col-sm-3 control-label">ชื่อบริษัทขนส่ง</label>
             <div class="col-sm-9">
-                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_bussiness_name">
+                <input type="text" id="bussiness_name" placeholder="" class="form-control" name="mem_shipper_bussiness_name">
             </div>
         </div>
         <div class="form-group">
             <label for="address" class="col-sm-3 control-label">ที่อยู่</label>
             <div class="col-sm-9">
-                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_address">
+                <input type="text" id="shipper_address" placeholder="" class="form-control" name="mem_shipper_address">
             </div>
         </div>
         <div class="form-group">
             <label for="subdistric" class="col-sm-3 control-label">ตำบล</label>
             <div class="col-sm-9">
-                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_subdistrict">
+                <input type="text" id="shipper_subdistrict" placeholder="" class="form-control" name="mem_shipper_subdistrict">
             </div>
         </div>
         <div class="form-group">
             <label for="distric" class="col-sm-3 control-label">อำเภอ</label>
             <div class="col-sm-9">
-                <input type="text" id="email" placeholder="" class="form-control" name="mem_shipper_district">
+                <input type="text" id="shipper_district" placeholder="" class="form-control" name="mem_shipper_district">
             </div>
         </div>
         <div class="form-group">
             <label for="country" class="col-sm-3 control-label">จังหวัด</label>
             <div class="col-sm-9">
-                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_province">
+                <input type="text" id="shipper_province" placeholder="" class="form-control" name="mem_shipper_province">
             </div>
         </div>
         <div class="form-group">
             <label for="postcode" class="col-sm-3 control-label">รหัสไปรณีย์</label>
             <div class="col-sm-9">
-                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_postcode">
+                <input type="text" id="shipper_postcode" placeholder="" class="form-control" name="mem_shipper_postcode" maxlength="5">
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label" for="address">รายละเอียดกิจการ</label>
             <div class="col-md-9">
-                <textarea style="width: 595px;height: 150px" class="form-control" id="address" name="mem_shipper_bussiness_detail"></textarea>
+                <textarea style="width: 595px;height: 150px" class="form-control" id="bussiness_detail" name="mem_shipper_bussiness_detail"></textarea>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-md-3 control-label" for="address">รูปกิจการ</label>
+            <label class="col-md-3 control-label" for="address">รูปผู้ขนส่ง</label>
             <div class="col-md-9">
                 <span class="fileinput-exists">Change</span>
                     <input type="file" name="upload_file">
@@ -83,13 +102,13 @@ echo form_open_multipart('member/add_regis_shipping',$attr);
         <div class="form-group">
             <label for="email" class="col-sm-3 control-label">e-mail</label>
             <div class="col-sm-9">
-                <input type="e-mail" id="password" placeholder="" class="form-control" name="mem_shipper_email" style="width: 595px">
+                <input type="e-mail" id="shipper_email" placeholder="" class="form-control" name="mem_shipper_email" style="width: 595px">
             </div>
         </div>
         <div class="form-group">
-            <label for="phoneNumber" class="col-sm-3 control-label">โทรศัพธ์</label>
+            <label for="phoneNumber" class="col-sm-3 control-label">โทรศัพท์</label>
             <div class="col-sm-9">
-                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_tel">
+                <input type="text" id="shipper_tel" placeholder="" class="form-control" name="mem_shipper_tel" maxlength="10">
             </div>
         </div>
         <div class="form-group">
@@ -116,7 +135,7 @@ echo form_open_multipart('member/add_regis_shipping',$attr);
         <div class="form-group">
             <label for="country" class="col-sm-3 control-label">ธนาคาร</label>
             <div class="col-sm-9">
-                <select id="country" class="form-control" name="mem_shipper_payment" style="width: 595px">
+                <select id="payment" class="form-control" name="mem_shipper_payment" style="width: 595px">
                     <option>กรุณาเลือกธนาคาร</option>
                     <option>ธนาคารกสิกรไทย</option>
                     <option>ธนาคารกรุงไทย</option>
@@ -128,13 +147,13 @@ echo form_open_multipart('member/add_regis_shipping',$attr);
         <div class="form-group">
             <label for="name-booking" class="col-sm-3 control-label">ชื่อบัญชีธนาคาร</label>
             <div class="col-sm-9">
-                <input type="text" id="firstName" placeholder="" class="form-control" name="mem_shipper_payment_name">
+                <input type="text" id="payment_name" placeholder="" class="form-control" name="mem_shipper_payment_name">
             </div>
         </div>
         <div class="form-group">
             <label for="num-booking" class="col-sm-3 control-label">เลขบัญชีธนาคาร</label>
             <div class="col-sm-9">
-                <input type="text" id="firstName" placeholder="" class="form-control" name="mem_shipper_payment_id">
+                <input type="text" id="payment_id" placeholder="" class="form-control" name="mem_shipper_payment_id">
             </div>
         </div>
 
@@ -143,31 +162,31 @@ echo form_open_multipart('member/add_regis_shipping',$attr);
         <div class="form-group">
             <label for="address" class="col-sm-3 control-label">ที่อยู่</label>
             <div class="col-sm-9">
-                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_address_bill">
+                <input type="text" id="address_bill" placeholder="" class="form-control" name="mem_shipper_address_bill">
             </div>
         </div>
         <div class="form-group">
             <label for="subdistric" class="col-sm-3 control-label">ตำบล</label>
             <div class="col-sm-9">
-                <input type="text" id="password" placeholder="" class="form-control" name="mem_shipper_subdistrict_bill">
+                <input type="text" id="subdistrict_bill" placeholder="" class="form-control" name="mem_shipper_subdistrict_bill">
             </div>
         </div>
         <div class="form-group">
             <label for="distric" class="col-sm-3 control-label">อำเภอ</label>
             <div class="col-sm-9">
-                <input type="text" id="email" placeholder="" class="form-control" name="mem_shipper_district_bill">
+                <input type="text" id="district_bill" placeholder="" class="form-control" name="mem_shipper_district_bill">
             </div>
         </div>
         <div class="form-group">
             <label for="country" class="col-sm-3 control-label">จังหวัด</label>
             <div class="col-sm-9">
-                <input type="text" id="provice" placeholder="" class="form-control" name="mem_shipper_province_bill">
+                <input type="text" id="province_bill" placeholder="" class="form-control" name="mem_shipper_province_bill">
             </div>
         </div>
         <div class="form-group">
             <label for="postcode" class="col-sm-3 control-label">รหัสไปรณีย์</label>
             <div class="col-sm-9">
-                <input type="text" id="postcode" placeholder="" class="form-control" name="mem_shipper_postcode_bill">
+                <input type="text" id="postcode" placeholder="" class="form-control" name="mem_shipper_postcode_bill" maxlength="5">
             </div>
         </div>
         <hr/>

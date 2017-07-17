@@ -5,30 +5,86 @@ class Member extends MX_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->module('init_sys/Init_sys');
+        $this->load->model('member/Member_buyer_model');
     }
 
-    // public function regis_shipping_page(){
-    //     $data['content']='member/regis-shipping-member';
-    //     $this->init_sys->content($data);
-    // }
-      public function confirm_page(){
-        $data['content']='member/confirm-page';
+
+//สมัครเป็นผู้ซื้อ
+	public function member_buyer_page(){	// man_page				ฟังก์ชั่น เรียกฟอร์มที่จะเพิ่ม คน/อุปกรณ์ / >> วิว add-man.php
+		$data['alert'] = $this->session->flashdata('alert');	//ตรวจสอบ
+		$data['content']='member/member_buyer';		//เชื่อมต่อชื่อ  module/views
+        $data['head']='สมัครเป็นผู้ซื้อ';
+		$this->init_sys->content($data);
+	}
+	public function add_member_buyer(){	//ฟังก์ชั่นเพิ่ม คน/อุปกรณ์
+		$data['buyer_list'] = $this->get_member_buyer();
+        $this->load->model('Member_buyer_model');
+        $timestam = date('Y-m-d H:i:s');
+        $this->Member_buyer_model->add_member_buyer(1);
+		$this->session->set_flashdata('alert', 1);
+		redirect('member/confirm_page');
+	}
+	public function get_member_buyer (){	//ฟังก์ชั่นในการรับ คน/อุปกรณ์  ใน model >> Man_models.php
+		$this->load->model('Member_buyer_model');
+		$result = $this->Member_buyer_model->get_member_buyer();	//ส่งค่าเมทธอด get_man ไป model ตามรหัส
+		return $result;
+
+	}
+    //แสดง
+   	public function member_buyer_profile_page() {//ฟังก์ชั่นแสดง >>  ดึงข้อมูลจาก DB มาแสดงวิว  /man.php
+   		$data['alert'] = $this->session->flashdata('alert');	//ตรวจสอบ
+   		$data['content']='member/member_buyer_profile';
+        $data['head']='ข้อมูลส่วนตัวผู้ซื้อ';			  //เชื่อมต่อ  module/views
+   		$data['buyer_list'] = $this->get_member_buyer(); //แสดงข้อมูลใน list ด้วยเมทธอด get_man
+   		$this->init_sys->content($data);
+   		// echo "string";
+   	}
+
+
+
+
+
+//สมัครผู้ขนส่ง
+     public function regis_shipping_page(){
+         $data['alert'] = $this->session->flashdata('alert');
+         $data['content']='member/regis-shipping-member';
+         $data['head']='สมัครเป็นผู้ขนส่ง';
+         $this->init_sys->content($data);
+     }
+     public function add_regis_shipping(){
+         $data['shipping_list'] = $this->get_regis_shipping();
+         $this->load->model('Member_shipping_model');
+         $timestam = date('Y-m-d H:i:s');
+         $this->Member_shipping_model->add_regis_shipping(1);
+         $this->session->set_flashdata('alert', 1);
+         redirect('member/confirm_page');
+     }
+     public function get_regis_shipping (){	//ฟังก์ชั่นในการรับ คน/อุปกรณ์  ใน model >> Man_models.php
+         $this->load->model('Member_shipping_model');
+         $result = $this->Member_shipping_model->get_regis_shipping();	//ส่งค่าเมทธอด get_man ไป model ตามรหัส
+         return $result;
+     }
+     //แสดง
+    public function member_shipping_profile_page() {//ฟังก์ชั่นแสดง >>  ดึงข้อมูลจาก DB มาแสดงวิว  /man.php
+        $data['alert'] = $this->session->flashdata('alert');	//ตรวจสอบ
+        $data['content']='member/member_shipping_profile';
+        $data['head']='ข้อมูลส่วนตัวผูขนส่ง';			  //เชื่อมต่อ  module/views
+        $data['shipping_list'] = $this->get_regis_shipping(); //แสดงข้อมูลใน list ด้วยเมทธอด get_man
         $this->init_sys->content($data);
+        // echo "string";
     }
 
-    // public function add_regis_shipping(){
-    //     $this->load->model('Member_shipping_model');
-    //     $this->Member_shipping_model->add_regis_shipping();
-    //     redirect('member/confirm_page');
-    // }
-    // public function get_regis_shipping (){
-    //     $this->load->model('Member_shipping_model');
-    //     $result = $this->Member_shipping_model->get_regis_shipping();
-    //     echo '<pre>', print_r($result);
-    //     return $result;
-    // }
 
 
+
+
+
+
+
+
+
+
+//สมัครเป็นผู้ขาย
     public function regis_seller_page(){
         $data['content']='member/member-seller-regist';
         $data['seller_data'] = $this->get_regis_seller();
@@ -81,34 +137,17 @@ class Member extends MX_Controller {
 
 
 
+//ยืนยันการสมัคร
+    public function confirm_page(){
+        $data['head'] = 'ยืนยันการสมัคร';
+        $data['content']='member/confirm-page';
+        $this->init_sys->content($data);
+    }
 
-
-    //login แพม
+//login แพม
       public function login_page(){
          $data['content']='member/login_view'; //  ชื่อ   controler/views  >> login
          $this->init_sys->content($data);//เรียกวิวให้แสดง
       }
 
-//       //ข้อมูลผู้ซื้อ
-//       public function member_buyer_page(){
-//          $data['content']='member/member_buyer';//  ชื่อ   controler/views
-//          $this->init_sys->content($data);//เรียกวิวข้อมูลผู้ซื้อ
-//       }
-
-//       //buyer_confirm
-//       public function buyer_confirm_page(){
-//          $data['content']='member/buyer_confirm';//  ชื่อ   controler/views
-//          $this->init_sys->content($data);//เรียกวิว buyer_confirm
-//       }
-//       public function add_member_buyer(){ //เพิ่มข้อมูลผู้สมัครซื้อลง DB
-//   		    $this->load->model('Member_buyer_model');
-//           $this->Member_buyer_model->add_member_buyer();
-//   		    redirect('member/confirm_page');
-//   	 }
-//   	public function get_member_buyer(){//ส่งค่า ข้อมูลที่สมัครซื้อ
-//   		$this->load->model('Member_buyer_model');
-//   		$result = $this->Member_buyer_model->get_member_buyer();
-//   		echo '<pre>', print_r($result);
-//   		return $result;
-//   	 }
 }

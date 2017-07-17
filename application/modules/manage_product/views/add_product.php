@@ -122,7 +122,6 @@ echo form_open_multipart('Manage_product/set_product_profile_page', $attr);?>
                         </div><br>
                         <div class="text-center"><button  class="btn btn-success btn-lg" type="submit">บันทึก</button></div>
                     </div>
-
                 </div><br><br>
             </div>
         </div>

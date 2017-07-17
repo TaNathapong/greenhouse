@@ -16,9 +16,10 @@ class Member_shipping_model extends CI_Model{
 
         $timestam = date('Y-m-d H:i:s');
         $input = array(
+			'mem_shipper_name' 					=> $this->input->post('mem_shipper_name'),
         	'mem_shipper_username' 				=> $this->input->post('mem_shipper_username'),
      		'mem_shipper_password' 				=> $this->input->post('mem_shipper_password'),
-            'mem_shipper_status'                => '0',
+            'mem_shipper_status'                => '1',
 
             'mem_shipper_email'                 => $this->input->post('mem_shipper_email'),
             'mem_shipper_tel'                   => $this->input->post('mem_shipper_tel'),

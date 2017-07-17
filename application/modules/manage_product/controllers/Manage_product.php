@@ -11,8 +11,9 @@ class manage_product extends MX_Controller {
         $this->load->model('Edit_models');
     }
     public function add_product_page(){
+        $data['head'] ='จัดการรายการสินค้า';
         $data['content']='Manage_product/add_product';
-		$this->init_sys->content($data);
+		  $this->init_sys->content($data);
     }
     public function set_product_profile_page(){
         echo '<pre>', print_r($this->input->post());
@@ -34,6 +35,7 @@ class manage_product extends MX_Controller {
 		$this->init_sys->content($data);
     }
     public function edit_prouduct_page(){
+        $data['head']='แก้ไข';
         $product_id = 3;
         $results = $this->Edit_models->get_product_detail($product_id);
         $data['product_list'] = $results;
@@ -48,7 +50,7 @@ class manage_product extends MX_Controller {
     }
 
     public function edit_auc_prouduct_page(){
-
+      $data['head']='.........';
         $data['content']='Manage_product/edit_auc_product';
 		$this->init_sys->content($data);
     }
@@ -105,7 +107,7 @@ class manage_product extends MX_Controller {
                     retrun();
                 }
             }
-            
+
     }
 
 }
