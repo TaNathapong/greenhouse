@@ -29,28 +29,15 @@
                   <hr/>
                   <div role="tabpanel">
                      <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="home">
+                        <div role="tabpanel" class="tab-pane fade in active" id="regis_buyer">
                            <h2>รายละเอียดผู้ซื้อ</h2>
-                           <p>รหัส : <?php echo $value['mem_buyer_id'];?></p>
-                           <p>ชื่อ : <?php echo $value['mem_buyer_name'];?></p>
-                           <p>รหัสบัตรประชาชน : <?php echo $value['mem_buyer_idcard'];?></p>
-                           <p>วันเกิด : <?php echo $value['mem_buyer_birth'];?></p>
+                           <p>รหัสผู้ซื้อ : <?php echo $value['mem_buyer_id'];?></p>
+                           <p>ชื่อ-สกุล: <?php echo $value['mem_buyer_name'];?></p>
+                           <p>เลขที่บัตรประชาชน : <?php echo $value['mem_buyer_idcard'];?></p>
                            <p>อีเมลล์ : <?php echo $value['mem_buyer_email'];?>์</p>
-                           <p>เบอร์โทร : <?php echo $value['mem_buyer_tel'];?></p>
+                           <p>ชื่อผู้ใช้งาน : <?php echo $value['mem_buyer_username'];?></p>
                            <br/>
-                           <h3>ที่อยู่ :</h3>
-                           <hr>
-                           <p>ตำบล : <?php echo $value['mem_buyer_subdistrict'];?></p>
-                           <p>อำเภอ : <?php echo $value['mem_buyer_district'];?></p>
-                           <p>จังหวัด : <?php echo $value['mem_buyer_province'];?></p>
-                           <p>รหัสไปรษณีย์ : <?php echo $value['mem_buyer_postcode'];?></p>
-                           <br/>
-                           <h3>ที่อยู่ใบเสร็จ :</h3>
-                           <hr>
-                           <p>ตำบล : <?php echo $value['mem_buyer_subdistrict_bill'];?></p>
-                           <p>อำเภอ : <?php echo $value['mem_buyer_district_bill'];?></p>
-                           <p>จังหวัด : <?php echo $value['mem_buyer_province_bill'];?></p>
-                           <p>รหัสไปรษณีย์ : <?php echo $value['mem_buyer_postcode_bill'];?></p>
+
                         </div>
                      </div>
                   </div>

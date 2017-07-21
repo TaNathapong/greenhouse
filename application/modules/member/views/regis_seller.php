@@ -1,7 +1,7 @@
-<!-- regist_member_byer  หน้าสมัครเป็นผู้ซื้อ -->
+<!-- regist_member_byer  หน้าสมัครเป็นผู้ขาย -->
 <?php
 $attr = array('class'=> 'form-horizontal');
-echo form_open_multipart('member/add_member_buyer',$attr);
+echo form_open_multipart('member/add_regis_seller',$attr);
 ?>
 <div class="container">
         <div class="row">
@@ -32,7 +32,7 @@ echo form_open_multipart('member/add_member_buyer',$attr);
                           <span class="fileinput-new">
 						  <img src="<?php echo base_url('dist/images/icons/addButton.png');?>" width="50%" alt="">
                           </span>
-                          <span class="fileinput-exists">Change</span>
+                        <!--  <span class="fileinput-exists">Change</span>  -->
                           <input type="file" name="upload_file">
                       </span>
                       <span class="fileinput-filename">
@@ -42,36 +42,36 @@ echo form_open_multipart('member/add_member_buyer',$attr);
                 <br/>
                 <div class="card-body card-padding">
                     <div class="form-group">
-                        <label class="col-sm-3 col-xs-2 control-label">ชื่อ-นามสกุล</label>
+                        <label class="col-sm-3 col-xs-2 control-label">ชื่อ-สกุล</label>
                         <div class="col-sm-9 col-xs-10">
-                            <input class="form-control" id="firstName" type="text" placeholder="" name="mem_buyer_name">
+                            <input class="form-control" id="firstName" type="text" placeholder="" name="mem_seller_name">
                         </div>
                         <br/><br/>
                         <label class="col-sm-3 col-xs-2 control-label">เลขที่บัตรประชาชน</label>
                         <div class="col-sm-9 col-xs-10">
-                            <input class="form-control" id="idcard" type="text" placeholder="" name="mem_buyer_idcard" maxlength="13">
+                            <input class="form-control" id="idcard" type="text" placeholder="" name="mem_seller_idcard" maxlength="13">
                         </div>
                         <br/><br/>
                         <label class="col-sm-3 col-xs-2 control-label">อีเมลล์</label>
                         <div class="col-sm-9 col-xs-10">
-                            <input class="form-control" id="buyer_email" type="text" placeholder="" name="mem_buyer_email">
+                            <input class="form-control" id="seller_email" type="text" placeholder="" name="mem_seller_email">
                         </div>
                         <br/><br/>
                         <label class="col-sm-3 col-xs-2 control-label">ชื่อผู้ใช้งาน</label>
                         <div class="col-sm-9 col-xs-10">
-                            <input class="form-control" id="username" type="text" placeholder="" name="mem_buyer_username">
+                            <input class="form-control" id="seller_username" type="text" placeholder="" name="mem_seller_username">
                         </div>
                         <br/><br/>
                         <label class="col-sm-3 col-xs-2 control-label">รหัสผ่าน</label>
                         <div class="col-sm-9 col-xs-10">
-                            <input class="form-control" id="password" type="text" placeholder="" name="mem_buyer_password">
+                            <input class="form-control" id="seller_password" type="text" placeholder="" name="mem_seller_password">
                         </div>
                         <br/><br/>
                         <label class="col-sm-3 col-xs-2 control-label">ยืนยันรหัสผ่าน</label>
                         <div class="col-sm-9 col-xs-10">
-                            <input class="form-control" id="password" type="text" placeholder="">
+                            <input class="form-control" id="seller_password" type="text" placeholder="" name="mem_seller_password">
                         </div>
-                        <br/><br/><br/>
+                        <br/><br/>
                     </div>
                     <div class="row">
                         <div class="col-sm-4 col-xs-4"></div>

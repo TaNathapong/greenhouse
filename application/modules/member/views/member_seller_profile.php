@@ -3,7 +3,7 @@
       <div class="product-content-right">
          <div class="row">
                 <?php
-                   foreach ($shipping_list as $key => $value)		//ดึงข้อมูลจาก DB มาแสดงใน list
+                   foreach ($seller_list as $key => $value)		//ดึงข้อมูลจาก DB มาแสดงใน list
                    {
                 ?>
             <div class="col-sm-6">
@@ -11,16 +11,16 @@
                   <div class="product-main-img">
                       	                                                             <!--กดรูป เพื่อแก้ไข-->
 <!--ดึงรูป-->           <center>
-                        <img src="<?php echo base_url('image_gh/'.$value['mem_shipper_pic']);?>" class="img-circle" alt="" width="304" height="236">
+                        <img src="<?php echo base_url('image_gh/'.$value['mem_seller_pic']);?>" class="img-circle" alt="" width="304" height="236">
                         <br/><br/>
-                        <p>สวัสดีคุณ : <?php echo $value['mem_shipper_name'];?></p>
+                        <p>สวัสดีคุณ : <?php echo $value['mem_seller_username'];?></p>
                       </center>
                   </div>
                </div>
             </div>
             <div class="col-sm-6">
                <div class="product-inner">
-                  <h2 class="product-name">ข้อมูลผู้ขนส่ง</h2>
+                  <h2 class="product-name">ข้อมูลผู้ขาย</h2>
                   <div class="product-breadcroumb">
                      <a href="">ติดตาม</a>
                      <a href="">จำนวนสินค้า</a>
@@ -29,18 +29,20 @@
                   <hr/>
                   <div role="tabpanel">
                      <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="home">
-                           <h2>ข้อมูลส่วนตัวผู้ขนส่ง</h2>
-                           <p>รหัสผู้ขนส่ง : <?php echo $value['mem_shipper_id'];?></p>
-                           <p>ชื่อ-สกุล : <?php echo $value['mem_shipper_name'];?></p>
-                           <p>เลขที่บัตรประชาชน : <?php echo $value['mem_shipper_idcard'];?></p>
-                           <p>อีเมลล์ : <?php echo $value['mem_shipper_email'];?></p>
-                           <p>ชื่อผู้ใช้งาน : <?php echo $value['mem_shipper_name'];?>์</p>
+                        <div role="tabpanel" class="tab-pane fade in active" id="regis_seller">
+                           <h2>รายละเอียดผู้ขาย</h2>
+                           <p>รหัสผู้ขนส่ง : <?php echo $value['mem_seller_id'];?></p>
+                           <p>ชื่อ : <?php echo $value['mem_seller_name'];?></p>
+                           <p>เลขบัตรประชาชน : <?php echo $value['mem_seller_idcard'];?></p>
+                           <p>อีเมลล์ : <?php echo $value['mem_seller_email'];?></p>
+                           <p>ชื่อผู้ใช้งาน : <?php echo $value['mem_seller_username'];?></p>
+                           <br/>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
+            
             <?php
    }
    ?>

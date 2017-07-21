@@ -30,21 +30,60 @@ class Member extends MX_Controller {
 		return $result;
 
 	}
-    //แสดง
+     //แสดง profile ผู้ซื้อ
    	public function member_buyer_profile_page() {//ฟังก์ชั่นแสดง >>  ดึงข้อมูลจาก DB มาแสดงวิว  /man.php
    		$data['alert'] = $this->session->flashdata('alert');	//ตรวจสอบ
    		$data['content']='member/member_buyer_profile';
         $data['head']='ข้อมูลส่วนตัวผู้ซื้อ';			  //เชื่อมต่อ  module/views
    		$data['buyer_list'] = $this->get_member_buyer(); //แสดงข้อมูลใน list ด้วยเมทธอด get_man
    		$this->init_sys->content($data);
-   		// echo "string";
+
    	}
 
 
 
 
 
-//สมัครผู้ขนส่ง
+
+
+    //สมัครเป็นผู้ขาย
+    	public function regis_seller_page(){	// man_page				ฟังก์ชั่น เรียกฟอร์มที่จะเพิ่ม คน/อุปกรณ์ / >> วิว add-man.php
+    		$data['alert'] = $this->session->flashdata('alert');	//ตรวจสอบ
+    		$data['content']='member/regis_seller';		//เชื่อมต่อชื่อ  module/views
+            $data['head']='สมัครเป็นผู้ขาย';
+    		$this->init_sys->content($data);
+    	}
+    	public function add_regis_seller(){	//ฟังก์ชั่นเพิ่ม คน/อุปกรณ์
+    		$data['seller_list'] = $this->get_regis_seller();
+            $this->load->model('Member_buyer_model');
+            $timestam = date('Y-m-d H:i:s');
+            $this->Member_seller_model->add_regis_seller(1);
+    		$this->session->set_flashdata('alert', 1);
+    		redirect('member/confirm_page');
+    	}
+    	public function get_regis_seller(){	//ฟังก์ชั่นในการรับ คน/อุปกรณ์  ใน model >> Man_models.php
+    		$this->load->model('Member_seller_model');
+    		$result = $this->Member_seller_model->get_regis_seller();	//ส่งค่าเมทธอด get_man ไป model ตามรหัส
+    		return $result;
+    	}
+         //แสดง profile ผู้ขาย
+       	public function member_seller_profile_page() {//ฟังก์ชั่นแสดง >>  ดึงข้อมูลจาก DB มาแสดงวิว  /man.php
+       		$data['alert'] = $this->session->flashdata('alert');	//ตรวจสอบ
+       		$data['content']='member/member_seller_profile';
+            $data['head']='ข้อมูลส่วนตัวผู้ขาย';			  //เชื่อมต่อ  module/views
+       		$data['seller_list'] = $this->get_regis_seller(); //แสดงข้อมูลใน list ด้วยเมทธอด get_man
+       		$this->init_sys->content($data);
+
+       	}
+
+
+
+
+
+
+
+
+//สมัครเป็นผู้ขนส่ง
      public function regis_shipping_page(){
          $data['alert'] = $this->session->flashdata('alert');
          $data['content']='member/regis-shipping-member';
@@ -64,14 +103,13 @@ class Member extends MX_Controller {
          $result = $this->Member_shipping_model->get_regis_shipping();	//ส่งค่าเมทธอด get_man ไป model ตามรหัส
          return $result;
      }
-     //แสดง
+     //แสดง profile ผู้ขนส่ง
     public function member_shipping_profile_page() {//ฟังก์ชั่นแสดง >>  ดึงข้อมูลจาก DB มาแสดงวิว  /man.php
         $data['alert'] = $this->session->flashdata('alert');	//ตรวจสอบ
         $data['content']='member/member_shipping_profile';
-        $data['head']='ข้อมูลส่วนตัวผูขนส่ง';			  //เชื่อมต่อ  module/views
+        $data['head']='ข้อมูลส่วนตัวผู้ขนส่ง';			  //เชื่อมต่อ  module/views
         $data['shipping_list'] = $this->get_regis_shipping(); //แสดงข้อมูลใน list ด้วยเมทธอด get_man
         $this->init_sys->content($data);
-        // echo "string";
     }
 
 
@@ -84,31 +122,22 @@ class Member extends MX_Controller {
 
 
 
-//สมัครเป็นผู้ขาย
-    public function regis_seller_page(){
-        $data['content']='member/member-seller-regist';
-        $data['seller_data'] = $this->get_regis_seller();
-        $this->init_sys->content($data);
-    }
 
-    public function add_regis_seller(){
-        $data['seller_data'] = $this->get_regis_seller();
-        $this->load->model('Member_seller_model');
-        $timestam = date('Y-m-d H:i:s');
-        $this->Member_seller_model->add_regis_seller();
-        redirect('member/confirm_page');
-    }
 
-    public function get_regis_seller (){
-        $this->load->model('Member_seller_model');
-        $result = $this->Member_seller_model->get_regis_seller();
-        echo '<pre>', print_r($result);
-        return $result;
-    }
-        public function profile_seller_page(){
-        $data['content']='member/member-seller-profile';
-        $this->init_sys->content($data);
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function post_product_page(){
         $data['content']='member/post_product';
         $this->init_sys->content($data);
