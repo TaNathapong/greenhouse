@@ -1,10 +1,11 @@
-<div class="container">
+<div class="container"><br>
         <h2>กรุณาเลือกวิธียืนยัน</h2>
         <div class="row col-sm-2"></div>
         <div class="col-sm-4">
             <div class="thumbnail">
                 <center>
-                    <img src="images/email.png" alt="" style="width:150px; height:150px;">
+                    <img src="<?php echo base_url('dist/images/mail.png');?>" alt="" style="width:150px; height:150px;">
+
                 </center>
             <div class="caption">
                 <center>
@@ -15,11 +16,11 @@
             </div>
             </div>
         </div>
-      
+
         <div class="row col-sm-4">
             <div class="thumbnail">
                 <center>
-                    <img src="images/phone.png" alt="" style="width:150px; height:150px;">
+                    <img src="<?php echo base_url('dist/images/smartphone.png');?>" alt="" style="width:150px; height:150px;">
                 </center>
             <div class="caption">
                 <center>

@@ -30,9 +30,9 @@ echo form_open_multipart('member/add_member_buyer',$attr);
                 <div class="fileinput fileinput-new card-body card-padding" data-provides="fileinput">
                       <span class="btn btn-default btn-file m-r-5">
                           <span class="fileinput-new">
-						  <img src="<?php echo base_url('dist/images/icons/addButton.png');?>" width="50%" alt="">
+						  <img src="<?php echo base_url('dist/images/icons/add-user.png');?>" width="40%" alt="">
                           </span>
-                          <span class="fileinput-exists">Change</span>
+                          <!--<span class="fileinput-exists">Change</span>-->
                           <input type="file" name="upload_file">
                       </span>
                       <span class="fileinput-filename">
