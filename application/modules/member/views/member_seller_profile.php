@@ -8,14 +8,16 @@
                 ?>
             <div class="col-sm-6">
                <div class="product-images">
-                  <div class="product-main-img">
-                      	                                                             <!--กดรูป เพื่อแก้ไข-->
-<!--ดึงรูป-->           <center>
-                        <img src="<?php echo base_url('image_gh/'.$value['mem_seller_pic']);?>" class="img-circle" alt="" width="304" height="236">
-                        <br/><br/>
-                        <p>สวัสดีคุณ : <?php echo $value['mem_seller_username'];?></p>
-                      </center>
-                  </div>
+                   <div class="product-main-img">
+                                                                                  <!--กดรูป เพื่อแก้ไข-->
+  <!--ดึงรูป-->            <center>
+                         <img src="<?php echo base_url('image_gh/'.$value['mem_seller_pic']);?>" class="img-circle" alt="" width="304" height="236">
+                         <br/><br/>
+                        </a>
+                         <h4>สวัสดีคุณ : <?php echo $value['mem_seller_username'];?></h4>
+                        </center>
+  <!--ปุ่มแก้ไข-->
+                   </div>
                </div>
             </div>
             <div class="col-sm-6">
@@ -32,8 +34,8 @@
                         <div role="tabpanel" class="tab-pane fade in active" id="regis_seller">
                            <h2>รายละเอียดผู้ขาย</h2>
                            <p>รหัสผู้ขนส่ง : <?php echo $value['mem_seller_id'];?></p>
-                           <p>ชื่อ : <?php echo $value['mem_seller_name'];?></p>
-                           <p>เลขบัตรประชาชน : <?php echo $value['mem_seller_idcard'];?></p>
+                           <p>ชื่อ - นามสกุล : <?php echo $value['mem_seller_name'];?></p>
+                           <p>เลขที่บัตรประชาชน : <?php echo $value['mem_seller_idcard'];?></p>
                            <p>อีเมลล์ : <?php echo $value['mem_seller_email'];?></p>
                            <p>ชื่อผู้ใช้งาน : <?php echo $value['mem_seller_username'];?></p>
                            <br/>
@@ -42,7 +44,7 @@
                   </div>
                </div>
             </div>
-            
+
             <?php
    }
    ?>

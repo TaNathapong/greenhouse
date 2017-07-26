@@ -49,7 +49,7 @@ echo form_open_multipart('member/add_member_buyer',$attr);
                         <br/><br/>
                         <label class="col-sm-3 col-xs-2 control-label">เลขที่บัตรประชาชน</label>
                         <div class="col-sm-9 col-xs-10">
-                            <input class="form-control" id="idcard" type="text" placeholder="" name="mem_buyer_idcard" maxlength="13">
+                            <input class="form-control" id="focusedInput" type="text" placeholder="" name="mem_buyer_idcard"  maxlength="13">
                         </div>
                         <br/><br/>
                         <label class="col-sm-3 col-xs-2 control-label">อีเมลล์</label>

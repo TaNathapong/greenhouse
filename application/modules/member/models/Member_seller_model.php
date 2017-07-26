@@ -22,6 +22,7 @@ class Member_seller_model extends CI_Model{	//DB  member_buyer สมัคร�
             'mem_seller_email' 		            => $this->input->post('mem_seller_email'),
 			'mem_seller_username' 		        => $this->input->post('mem_seller_username'),
 			'mem_seller_password' 		        => $this->input->post('mem_seller_password'),
+			'mem_seller_status' 	 			=> '1',
 			'created'       					=> $timestam,     //อัตโน
 			'last_update'    					=> $timestam
 		);
@@ -33,4 +34,6 @@ class Member_seller_model extends CI_Model{	//DB  member_buyer สมัคร�
 		return $result;
 	}
 
+
+	
 }
