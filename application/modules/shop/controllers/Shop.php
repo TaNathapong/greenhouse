@@ -42,6 +42,7 @@ class Shop extends MX_Controller {
 	}
 
 	public function travel_page() {
+		$data['head']="การท่องเที่ยว";
 		$data['content']='shop/travel-page';
 	
 	

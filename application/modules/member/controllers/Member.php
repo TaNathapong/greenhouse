@@ -199,10 +199,10 @@ class Member extends MX_Controller {
         $this->init_sys->content($data);
     }
 
-//login แพม
-      public function login_page(){
-         $data['content']='member/login_view'; //  ชื่อ   controler/views  >> login
-         $this->init_sys->content($data);//เรียกวิวให้แสดง
-      }
+    public function contract_page(){
+        $data['head'] = 'ติดต่อเรา';
+        $data['content']='member/contract';
+        $this->init_sys->content($data);
+    }
 
 }
