@@ -59,7 +59,7 @@
     <div class="row" style="padding:10px;">
         <div class="col-md-4">
             <div class="cat-area-otop w3-opacity w3-hover-opacity-off">
-                <a href="<?php echo site_url('shop/shop_page');?>">
+                <a href="<?php echo site_url('otop/show_otop_page');?>">
                     <div class="first-title">
                         <h2>OTOP</h2>
                     </div>
@@ -68,7 +68,7 @@
         </div>
         <div class="col-md-4">
             <div class="cat-area-product w3-opacity w3-hover-opacity-off">
-                <a href="<?php echo site_url('shop/shop_page');?>">
+                <a href="<?php echo site_url('processing/show_processing_page');?>">
                     <div class="first-title">
                         <h2>แปรรูป</h2>
                     </div>
@@ -77,7 +77,7 @@
         </div>
         <div class="col-md-4">
             <div class="cat-area-food w3-opacity w3-hover-opacity-off">
-                <a href="<?php echo site_url('shop/shop_page');?>">
+                <a href="<?php echo site_url('food/show_food_page');?>">
                     <div class="first-title">
                         <h2>อาหาร</h2>
                     </div>
