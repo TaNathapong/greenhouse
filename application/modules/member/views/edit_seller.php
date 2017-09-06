@@ -4,24 +4,24 @@
             <div class="row">
                 <?php
                 $attr = array('class' => 'form-horizontal');
-                echo form_open_multipart('Member/update_buyer_details/'.$this->uri->segment(3),$attr);
+                echo form_open_multipart('Member/update_seller_details/'.$this->uri->segment(3),$attr);
                 ?>
-                <?php foreach ($buyer_details as $key => $value)
+                <?php foreach ($seller_details as $key => $value)
                 {
                     ?>
 
                     <div class="row">
                         <div class="col-sm-2">
-                            <a href="<?php echo site_url('Member/member_buyer_profile_page');?>" type="cancel" class="btn btn-success btn-block">กลับ</a>
+                            <a href="<?php echo site_url('Member/member_seller_profile_page');?>" type="cancel" class="btn btn-success btn-block">กลับ</a>
                         </div><br>
                         <div class="col-sm-8">
                             <div class="card">
                                 <div class="card-body card-padding text-center">
-                                    <h3 class="text-center">แก้ไขข้อมูลคุณ : <?php echo $value['mem_buyer_username'];?></h3>
+                                    <h3 class="text-center">แก้ไขข้อมูลคุณ : <?php echo $value['mem_seller_username'];?></h3>
                                     <!--รูป-->
                                     <div class="fileinput fileinput-new card-body card-padding" data-provides="fileinput" align="center">
                                         <span class="btn btn-default btn-file m-r-10">
-                                            <span class="fileinput-new"><img src="<?php echo base_url('image_gh/'.$value['mem_buyer_pic']);?>" style="width: auto; height: 300px; margin-top: 10px;"></span>
+                                            <span class="fileinput-new"><img src="<?php echo base_url('image_gh/'.$value['mem_seller_pic']);?>" style="width: auto; height: 300px; margin-top: 10px;"></span>
                                             <!--<span class="fileinput-exists">Change</span>-->
                                             <input type="file" name="upload_file">
                                         </span>
@@ -33,32 +33,32 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 col-xs-2 control-label">ชื่อ-นามสกุล</label>
                                             <div class="col-sm-9 col-xs-10">
-                                                <input class="form-control" id="focusedInput" type="text" name="mem_buyer_name" placeholder="<?php echo $value['mem_buyer_name'];?>">
+                                                <input class="form-control" id="focusedInput" type="text" name="mem_seller_name" placeholder="<?php echo $value['mem_seller_name'];?>">
                                             </div>
                                             <br/><br/>
                                             <label class="col-sm-3 col-xs-2 control-label">เลขที่บัตรประชาชน</label>
                                             <div class="col-sm-9 col-xs-10">
-                                                <input class="form-control" id="focusedInput" type="text" name="mem_buyer_idcard" placeholder="<?php echo $value['mem_buyer_idcard'];?>" maxlength="13">
+                                                <input class="form-control" id="focusedInput" type="text" name="mem_seller_idcard" placeholder="<?php echo $value['mem_seller_idcard'];?>" maxlength="13">
                                             </div>
                                             <br/><br/>
                                             <label class="col-sm-3 col-xs-2 control-label">อีเมลล์</label>
                                             <div class="col-sm-9 col-xs-10">
-                                                <input class="form-control" id="focusedInput" type="text" name="mem_buyer_email" placeholder="<?php echo $value['mem_buyer_email'];?>">
+                                                <input class="form-control" id="focusedInput" type="text" name="mem_seller_email" placeholder="<?php echo $value['mem_seller_email'];?>">
                                             </div>
                                             <br/><br/>
                                             <label class="col-sm-3 col-xs-2 control-label">ชื่อผู้ใช้งาน</label>
                                             <div class="col-sm-9 col-xs-10">
-                                                <input class="form-control" id="focusedInput" type="text" name="mem_buyer_username" placeholder="<?php echo $value['mem_buyer_username'];?>">
+                                                <input class="form-control" id="focusedInput" type="text" name="mem_seller_username" placeholder="<?php echo $value['mem_seller_username'];?>">
                                             </div>
                                             <br/><br/>
                                             <label class="col-sm-3 col-xs-2 control-label">รหัสผ่าน</label>
                                             <div class="col-sm-9 col-xs-10">
-                                                <input class="form-control" id="focusedInput" type="text" name="mem_buyer_password" placeholder="<?php echo $value['mem_buyer_password'];?>">
+                                                <input class="form-control" id="focusedInput" type="text" name="mem_seller_password" placeholder="<?php echo $value['mem_seller_password'];?>">
                                             </div>
                                             <br/><br/>
                                             <label class="col-sm-3 col-xs-2 control-label">ยืนยันรหัสผ่าน</label>
                                             <div class="col-sm-9 col-xs-10">
-                                                <input class="form-control" id="focusedInput" type="text" name="mem_buyer_password" placeholder="<?php echo $value['mem_buyer_password'];?>">
+                                                <input class="form-control" id="focusedInput" type="text" name="mem_seller_password" placeholder="<?php echo $value['mem_seller_password'];?>">
                                             </div>
                                             <br/><br/>
                                         </div>
@@ -118,7 +118,7 @@
                                 <div class="modal-body">
                                     <div class="col-sm-4 col-xs-4"></div>
                                     <div class="col-sm-4 col-xs-4">
-                                        <a href="<?php echo site_url('Member/delete_buyer/'.$value['mem_buyer_id']);?>" class="btn btn-success btn-lg btn-block">ยืนยัน</a>
+                                        <a href="<?php echo site_url('Member/delete_seller/'.$value['mem_seller_id']);?>" class="btn btn-success btn-lg btn-block">ยืนยัน</a>
                                     </div>
                                     <div class="col-sm-4 col-xs-4">
                                         <a type="button" data-dismiss="modal" class="btn btn-danger btn-lg btn-block">ยกเลิก</a>

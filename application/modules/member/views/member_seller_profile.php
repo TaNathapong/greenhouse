@@ -16,7 +16,11 @@
                         </a>
                          <h4>สวัสดีคุณ : <?php echo $value['mem_seller_username'];?></h4>
                         </center>
-  <!--ปุ่มแก้ไข-->
+  <!--ปุ่มแก้ไข-->         <a href= "<?php echo site_url('Member/seller_edit/'.$value['mem_seller_id']);?>">
+                        <center>
+                          <button class="btn btn-success">แก้ไขข้อมูล</button>
+                        </center>
+                      </a>
                    </div>
                </div>
             </div>

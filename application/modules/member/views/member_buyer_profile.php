@@ -42,7 +42,7 @@
                         <img src="<?php echo base_url('image_gh/'.$value['mem_buyer_pic']);?>" class="img-circle" alt="" width="304" height="236">
                         <br/><br/>
                        </a>
-                        <h4>สวัสดีคุณ : <?php echo $value['mem_buyer_username'];?></h4>
+                        <h4>ชื่อผู้ใช้งาน : <?php echo $value['mem_buyer_username'];?></h4>
                        </center>
 <!--ปุ่มแก้ไข-->         <a href= "<?php echo site_url('Member/buyer_edit/'.$value['mem_buyer_id']);?>">
                         <center>
@@ -69,7 +69,6 @@
                            <p>ชื่อ-สกุล: <?php echo $value['mem_buyer_name'];?></p>
                            <p>เลขที่บัตรประชาชน: <?php echo $value['mem_buyer_idcard'];?></p>
                            <p>อีเมลล์ : <?php echo $value['mem_buyer_email'];?></p>
-                           <p>ชื่อผู้ใช้งาน : <?php echo $value['mem_buyer_username'];?></p>
                            <br/>
                         </div>
                      </div>

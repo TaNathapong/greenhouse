@@ -34,7 +34,7 @@
                 </a>
             </div>
             <div class="area-travel w3-opacity w3-hover-opacity-off">
-                <a href="<?php echo site_url('shop/travel_page');?>">
+                <a href="<?php echo site_url('travel/show_travel_page');?>">
                     <div class="second-title">
                         <h2>ท่องเที่ยว</h2>
                     </div>

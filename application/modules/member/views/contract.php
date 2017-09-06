@@ -57,21 +57,4 @@
             </div>
         </div>
     </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-5 no-padding lib-item" data-category="ui">
-        <br/>
-        <div class="lib-panel">
-            <div class="row box-shadow">
-                <div class="col-md-3">
-                    <img src="<?php echo base_url('dist/icon/001-business.png');?>" style="width:80px; height:80px;">
-                </div>
-                <div class="col-md-9">
-                    <br/>
-                    <h3><a href="contract-report.html">แจ้งปัญหา</a></h3>
-                </div>
-            </div>
-        </div>
-        <br/>
-        <br/>
-    </div>
 </div>
