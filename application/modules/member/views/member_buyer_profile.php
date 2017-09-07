@@ -1,3 +1,31 @@
+<style>
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #FFFFFF;
+}
+
+.button:hover {
+    background-color: #FFFF66;
+    color: black;
+    font-size: 18px;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
 <div class="single-product-area">
    <div class="container">
       <div class="product-content-right">
@@ -9,12 +37,18 @@
             <div class="col-sm-6">
                <div class="product-images">
                   <div class="product-main-img">
-                      	                                                             <!--กดรูป เพื่อแก้ไข-->
-<!--ดึงรูป-->           <center>
+                      <a href= "<?php echo site_url('Member/buyer_edit/'.$value['mem_buyer_id']);?>">	<!--กดรูป เพื่อแก้ไข-->                                                             <!--กดรูป เพื่อแก้ไข-->
+<!--ดึงรูป-->            <center>
                         <img src="<?php echo base_url('image_gh/'.$value['mem_buyer_pic']);?>" class="img-circle" alt="" width="304" height="236">
                         <br/><br/>
-                        <p>สวัสดีคุณ : <?php echo $value['mem_buyer_username'];?></p>
-                      </center>
+                       </a>
+                        <h4>ชื่อผู้ใช้งาน : <?php echo $value['mem_buyer_username'];?></h4>
+                       </center>
+<!--ปุ่มแก้ไข-->         <a href= "<?php echo site_url('Member/buyer_edit/'.$value['mem_buyer_id']);?>">
+                        <center>
+                          <button class="button">แก้ไขข้อมูล</button>
+                        </center>
+                      </a>
                   </div>
                </div>
             </div>
@@ -29,31 +63,17 @@
                   <hr/>
                   <div role="tabpanel">
                      <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="home">
+                        <div role="tabpanel" class="tab-pane fade in active" id="regis_buyer">
                            <h2>รายละเอียดผู้ซื้อ</h2>
-                           <p>รหัส : <?php echo $value['mem_buyer_id'];?></p>
-                           <p>ชื่อ : <?php echo $value['mem_buyer_name'];?></p>
-                           <p>รหัสบัตรประชาชน : <?php echo $value['mem_buyer_idcard'];?></p>
-                           <p>วันเกิด : <?php echo $value['mem_buyer_birth'];?></p>
-                           <p>อีเมลล์ : <?php echo $value['mem_buyer_email'];?>์</p>
-                           <p>เบอร์โทร : <?php echo $value['mem_buyer_tel'];?></p>
+                           <p>รหัสผู้ซื้อ : <?php echo $value['mem_buyer_id'];?></p>
+                           <p>ชื่อ-สกุล: <?php echo $value['mem_buyer_name'];?></p>
+                           <p>เลขที่บัตรประชาชน: <?php echo $value['mem_buyer_idcard'];?></p>
+                           <p>อีเมลล์ : <?php echo $value['mem_buyer_email'];?></p>
                            <br/>
-                           <h3>ที่อยู่ :</h3>
-                           <hr>
-                           <p>ตำบล : <?php echo $value['mem_buyer_subdistrict'];?></p>
-                           <p>อำเภอ : <?php echo $value['mem_buyer_district'];?></p>
-                           <p>จังหวัด : <?php echo $value['mem_buyer_province'];?></p>
-                           <p>รหัสไปรษณีย์ : <?php echo $value['mem_buyer_postcode'];?></p>
-                           <br/>
-                           <h3>ที่อยู่ใบเสร็จ :</h3>
-                           <hr>
-                           <p>ตำบล : <?php echo $value['mem_buyer_subdistrict_bill'];?></p>
-                           <p>อำเภอ : <?php echo $value['mem_buyer_district_bill'];?></p>
-                           <p>จังหวัด : <?php echo $value['mem_buyer_province_bill'];?></p>
-                           <p>รหัสไปรษณีย์ : <?php echo $value['mem_buyer_postcode_bill'];?></p>
                         </div>
                      </div>
                   </div>
+
                </div>
             </div>
             <?php
