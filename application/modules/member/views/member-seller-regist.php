@@ -2,44 +2,54 @@
 $attr = array('class' => 'form-horizontal');
 echo form_open('member/add_regis_seller',$attr);
 ?>
-<div class="container">
-    <form class="form-horizontal" role="form"><br/>
+<style type="text/css">
+    #box-oh{
+      box-shadow: 0px 0px 10px #888888;
+      height: 500px;
+      padding: 20px 100px 20px 100px;
+      margin-bottom: 20px;
+    }
+</style>
+<div class="container" >
+
+    <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data"><br/>
+    <div id="box-oh">
         <h2>ข้อมูลของผู้ขาย</h2>
         <h3>ข้อมูลส่วนตัว</h3>
-        <div class="form-group">
+        <div class="form-group" >
             <label for="display" class="col-sm-3 control-label">รูปประจำตัว</label>
             <div class="col-sm-9">
-                <input type="file" name="upload_file">
+                <input type="file" name="user_pic" id="fileToUpload">
             </div>
         </div>
         <div class="form-group">
             <label for="idNum" class="col-sm-3 control-label">ชื่อ-นามสกุล</label>
             <div class="col-sm-9">
-                <input type="namelastname" id="namelastname" placeholder="" class="form-control" name="mem_seller_name">
+                <input type="text" id="namelastname" placeholder="" class="form-control" name="mem_seller_name">
             </div>
         </div>
         <div class="form-group">
             <label for="idNum" class="col-sm-3 control-label">เลขทีบัตรประชาชน</label>
             <div class="col-sm-9">
-                <input type="idcard" id="idcard" placeholder="" class="form-control" name="mem_seller_idcard">
+                <input type="text" id="idcard" placeholder="" class="form-control" name="mem_seller_idcard">
             </div>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="birthDate" class="col-sm-3 control-label">วันเกิด</label>
             <div class="col-sm-9">
                 <input type="date" id="" class="form-control" name="mem_seller_birth">
             </div>
-        </div>
+        </div> -->
         <div class="form-group">
-            <label for="email" class="col-sm-3 control-label">Email</label>
+            <label for="text" class="col-sm-3 control-label">อีเมล</label>
             <div class="col-sm-9">
-                <input type="email" id="email" placeholder="" class="form-control" name="mem_seller_email">
+                <input type="text" id="email" placeholder="" class="form-control" name="mem_seller_email">
             </div>
         </div>
         <div class="form-group">
             <label for="userName" class="col-sm-3 control-label">ชื่อผู้ใช้</label>
             <div class="col-sm-9">
-                <input type="password" id="password" placeholder="" class="form-control" name="mem_seller_username">
+                <input type="text" id="password" placeholder="" class="form-control" name="mem_seller_username">
             </div>
         </div>
         <div class="form-group">
@@ -56,7 +66,7 @@ echo form_open('member/add_regis_seller',$attr);
         </div>
 
         
-        <h3>ช่องทางการชำระเงิน</h3>
+        <!-- <h3>ช่องทางการชำระเงิน</h3>
         <div class="form-group">
             <label for="country" class="col-sm-3 control-label">ธนาคาร</label>
             <div class="col-sm-9">
@@ -148,13 +158,14 @@ echo form_open('member/add_regis_seller',$attr);
             <div class="col-sm-9">
                 <input type="province_bill" id="province_bill" placeholder="" class="form-control" name="mem_seller_province_bill">
             </div>
-        </div>
+        </div> -->
         <div class="form-group">
             <div class="col-sm-9"></div>
             <div class="col-sm-3">
-                <button type="submit" class="btn btn-info btn-block" href="">สมัครสมาชิก</button>
+                <button type="submit" class="btn btn-info btn-block" href="">บันทึกข้อมูล</button>
             </div>
         </div>
+    </div>
     </form> <!-- /form -->
 </div> <!-- ./container -->
 <?php echo form_close();?>

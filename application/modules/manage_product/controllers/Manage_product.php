@@ -11,9 +11,8 @@ class manage_product extends MX_Controller {
         $this->load->model('Edit_models');
     }
     public function add_product_page(){
-        $data['head'] ='จัดการรายการสินค้า';
         $data['content']='Manage_product/add_product';
-		  $this->init_sys->content($data);
+		$this->init_sys->content($data);
     }
     public function set_product_profile_page(){
         echo '<pre>', print_r($this->input->post());
@@ -35,22 +34,15 @@ class manage_product extends MX_Controller {
 		$this->init_sys->content($data);
     }
     public function edit_prouduct_page(){
-        $data['head']='แก้ไข';
-        $product_id = 3;
-        $results = $this->Edit_models->get_product_detail($product_id);
-        $data['product_list'] = $results;
+
         $data['content']='Manage_product/edit_product';
+        $product_id = $this->uri->segment(3);
         $timestam = date('Y-m-d H:i:s');
+        $data['product_details'] = $this->product_model->get_product_detail($product_id);
         $this->init_sys->content($data);
     }
-    public function set_edit_prouduct_page(){
-        echo '<pre>', print_r($this->input->post());
-        $product_id = 3;
-        $data['product_update'] = $this->Edit_models->update_product_detail($product_id);
-    }
-
     public function edit_auc_prouduct_page(){
-      $data['head']='.........';
+
         $data['content']='Manage_product/edit_auc_product';
 		$this->init_sys->content($data);
     }
@@ -59,19 +51,21 @@ class manage_product extends MX_Controller {
 		$this->init_sys->content($data);
     }
     public function add_travel(){
+        $data['head']='เพิ่มสถานที่ท่องเที่ยว';
         $data['content']='Manage_product/add_travel';
         $this->init_sys->content($data);
+
     }
     public function form_validation(){ //ฟังชัน save travel
         //echo("ok");
-        $url=$this->insert_pic();
+        $url=$this->insert_pic(); //เรียกใช้งานฟังชั่น insert_pic และส่งค่ากลับมากับตัวแปร $url
         $this->load->library('form_validation');
-        $this->form_validation->set_rules("travel_name","Travel_name",'required|alpha');
-        $this->form_validation->set_rules("travel_detail","Travel_detail",'required|alpha');
-        if ($this->form_validation->run()) {
-            $this->load->model("Save_travel");
-            $id = rand(1000,9000);
-            $formData = array(
+        $this->form_validation->set_rules("travel_name","Travel_name",'required|alpha');// เช็คฟอร์ม name
+        $this->form_validation->set_rules("travel_detail","Travel_detail",'required|alpha');//เช็คฟอร์ม detail
+        if ($this->form_validation->run()) { // ถ้าเช็คฟอร์มผ่าน
+            $this->load->model("Save_travel"); //เรียกโมเดวชื่อ Save_travel.php
+            $id = rand(1000,9000); //สุ่มตัวเลยเพื่อเป็น id
+            $formData = array( //เก็บค่าจากหอร์ม ไว้ในตัวแปร array
                 "travel_id"=>$id,
                 "travel_name"=>$this->input->post("travel_name"),
                 "travel_detail"=>$this->input->post("travel_detail"),
@@ -81,15 +75,17 @@ class manage_product extends MX_Controller {
                 "created"=>date('Y-m-d H:i:s'),
                 "last_update"=>date('Y-m-d H:i:s'),
                 );
+            //$this -> ชื่อโมเดว -> ชื่อฟังชั่นในโมเดว(ส่งตัวแปรเข้าไป)
             $this->Save_travel->insert_data($formData);
-            echo("save data seccucs");
-            //$this->add_travel();
-        }else {
+            //echo("save data seccucs");
+            $this->inserted();
+        }else { //ถ้าเช็คฟอร์มไม่ผ่าน
             $this->add_travel();
         }
     }
     public function inserted(){
-        $data['content']='Manage_product/add_travel';
+        $data['head']='ท่องเที่ยว';
+        $data['content']='Shop/travel-details';
         $this->init_sys->content($data);
     }
     public function insert_pic(){
@@ -107,7 +103,7 @@ class manage_product extends MX_Controller {
                     retrun();
                 }
             }
-
+            
     }
 
 }
