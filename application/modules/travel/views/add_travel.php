@@ -1,22 +1,12 @@
 <!-- regist_member_byer  หน้าสมัครเป็นผู้ซื้อ -->
 <?php
-$attr = array('class'=> 'form-horizontal');
-echo form_open_multipart('travel/add_travel',$attr);
+    $attr = array('class'=> 'form-horizontal');
+    echo form_open_multipart('travel/add_travel',$attr);
 ?>
-<div class="container">
-        <div class="row">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-        </div>
-</div> <!-- End mainmenu area -->
-<br>
-<div class="container">
+<div class="container"><br/>
+    <div class="col-sm-2">
+        <a href="<?php echo site_url('travel/show_travel_page');?>" type="cancel" class="btn btn-success">ย้อนกลับ</a>
+    </div><br>
     <form class="form-horizontal" role="form">
 <div class="row">
     <div class="col-sm-2"></div>
@@ -55,7 +45,8 @@ echo form_open_multipart('travel/add_travel',$attr);
                         <div class="col-sm-4 col-xs-4" align="center">
                             <a class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myAddRawModal">บันทึกข้อมูล</a>
                         </div>
-                        <div class="col-sm-4 col-xs-4"></div>
+                        <div class="col-sm-4 col-xs-4">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,7 +62,7 @@ echo form_open_multipart('travel/add_travel',$attr);
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">ยืนยันข้อมูล?</h4>
+                <h4 class="modal-title">เพิ่มสถานที่ท่องเที่ยว?</h4>
             </div>
 
             <div class="modal-body">

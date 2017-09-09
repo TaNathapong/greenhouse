@@ -71,14 +71,11 @@ class travel_model extends CI_Model{	//DB  member_buyer สมัครเป็
         	$this->db->update('travel',$input);
 		}
 
-
-
-		//model_ลบ
+//model_ลบ
 		public function delete_travel($id){
 			$this->db->delete('travel', array('travel_id' => $id));	//ลบตาราง  equipment ตามรหัส
 
 		 }
-
 
 
 	

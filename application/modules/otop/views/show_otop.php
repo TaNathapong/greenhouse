@@ -5,14 +5,14 @@
                   <button class="button">เพิ่มสินค้า OTOP</button>
           </a>
 
-       <div class="row">
+       <div class="row"><br>
+         <h3>สินค้า OTOP</h3>
           <?php
                foreach ($otop_list as $key => $value)     //ดึงข้อมูลจาก DB มาแสดงใน list
                {
             ?>
             <br/>
          <div class="container" style="padding: 25px;">
-                <h3>สินค้า OTOP</h3>
                 <div class="row row-margin-bottom">
                     <div class="col-md-5 no-padding lib-item" data-category="view">
                         <div class="lib-panel">

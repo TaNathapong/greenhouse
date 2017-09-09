@@ -45,7 +45,7 @@ class Travel extends MX_Controller {
 	public function travel_edit(){
 		$data['alert'] = $this->session->flashdata('alert');
 		$data['content']='Travel/edit_travel';
-        $data['head'] = 'แก้ไขข้อมูลสถานที่ท่องเที่ยว';
+        $data['head'] = 'แก้ไขสถานที่ท่องเที่ยว';
 		$travel_id = $this->uri->segment(3);
 		$data['travel_details'] = $this->Travel_model->get_travel_details($travel_id);
 		$this->init_sys->content($data);
@@ -58,7 +58,7 @@ class Travel extends MX_Controller {
 		$this->session->set_flashdata('alert', 1);
 		redirect('travel/show_travel_page'); 
 	}
-    //ลบผู้ซื้อ
+   //ลบผู้ซื้อ
     public function delete_travel(){
 		$this->load->model('Travel_model');
 		$id = $this->uri->segment(3);
